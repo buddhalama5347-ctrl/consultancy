@@ -30,7 +30,7 @@ const teamMembers = [
 export default function OurTeamPage() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <main className="min-h-screen pt-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
           <div className="text-center mb-16">
@@ -67,7 +67,8 @@ export default function OurTeamPage() {
             </button>
           </div>
         </div>
-      </main>
+      </main> */}
+      <h1 className="font-lg bg-red-500 mt-20 h-[50vh]">later</h1>
     </>
   );
 }

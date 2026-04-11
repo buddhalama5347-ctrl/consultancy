@@ -40,14 +40,14 @@ A personal note from our founder on why we do what we do.
               <div className="absolute -inset-6 bg-gradient-to-br from-gold/20 to-transparent rounded-3xl" />
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlyZWN0b3J8ZW58MHx8MHx8fDA%3D"
-                alt="Mr. Rajesh Sharma - Managing Director"
+                alt="Mr. Pasang Lama - Managing Director"
                 className="relative w-full rounded-2xl object-cover aspect-[4/5] shadow-2xl"
                 loading="lazy"
                 width={640}
                 height={800}
               />
               <div className="mt-8 text-center">
-                <h3 className="font-display text-3xl font-bold text-foreground">Mr. Rajesh Sharma</h3>
+                <h3 className="font-display text-3xl font-bold text-foreground">Mr. Pasang Lama</h3>
                 <p className="text-gold text-lg font-semibold mt-2">Managing Director & Founder</p>
               </div>
 
@@ -134,7 +134,7 @@ A personal note from our founder on why we do what we do.
               />
              
               <div>
-                <p className="text-lg text-foreground font-bold">Rajesh Sharma</p>
+                <p className="text-lg text-foreground font-bold">Pasang Lama</p>
                 <p className="text-muted-foreground text-base">Managing Director & Founder</p>
               </div>
             </div>
