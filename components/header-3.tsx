@@ -6,9 +6,11 @@ import { MenuToggleIcon } from '@/components/menu-toggle-icon';
 import { createPortal } from 'react-dom';
 import {
 	NavigationMenu,
+	NavigationMenuContent,
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
+	NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { LucideIcon } from 'lucide-react';
 import Link from "next/link"
@@ -67,12 +69,39 @@ export function Header() {
 									</Link>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<NavigationMenuLink className="px-4" asChild>
-									<Link href="/about" className="hover:bg-accent rounded-md p-2">
-										About
-									</Link>
-								</NavigationMenuLink>
+							<NavigationMenuItem>									<NavigationMenuLink className="px-4" asChild>
+										<Link href="/universities" className="hover:bg-accent rounded-md p-2">
+											Universities
+										</Link>
+									</NavigationMenuLink>
+								</NavigationMenuItem>
+								<NavigationMenuItem>								<NavigationMenuTrigger className="px-4">About</NavigationMenuTrigger>
+								<NavigationMenuContent>
+									<div className="w-64 p-4">
+										<div className="space-y-2">
+											<NavigationMenuLink asChild>
+												<Link href="/about" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													Introduction
+												</Link>
+											</NavigationMenuLink>
+											<NavigationMenuLink asChild>
+												<Link href="/about/director-message" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													Director Message
+												</Link>
+											</NavigationMenuLink>
+											<NavigationMenuLink asChild>
+												<Link href="/about/why-choose-us" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													Why Choose Us
+												</Link>
+											</NavigationMenuLink>
+											<NavigationMenuLink asChild>
+												<Link href="/about/our-team" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													Our Team
+												</Link>
+											</NavigationMenuLink>
+										</div>
+									</div>
+								</NavigationMenuContent>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
 								<NavigationMenuLink className="px-4" asChild>
@@ -107,10 +136,22 @@ export function Header() {
 					</Link>
 					<Link href="/destinations" className="text-sm hover:bg-accent rounded-md p-2">
 						Destinations
-					</Link>
-					<Link href="/about" className="text-sm hover:bg-accent rounded-md p-2">
-						About
-					</Link>
+					</Link>				<Link href="/universities" className="text-sm hover:bg-accent rounded-md p-2">
+					Universities
+				</Link>					<div className="space-y-2">
+						<Link href="/about" className="text-sm hover:bg-accent rounded-md p-2 block">
+							About - Introduction
+						</Link>
+						<Link href="/about/director-message" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
+							Director Message
+						</Link>
+						<Link href="/about/why-choose-us" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
+							Why Choose Us
+						</Link>
+						<Link href="/about/our-team" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
+							Our Team
+						</Link>
+					</div>
 					<Link href="/interview-preparation" className="text-sm hover:bg-accent rounded-md p-2">
 						Interview Preparation
 					</Link>

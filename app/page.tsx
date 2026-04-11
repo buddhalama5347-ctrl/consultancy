@@ -11,10 +11,12 @@ import FloatingServices from "@/components/popular";
 import Banner from "@/components/banner";
 import FAQPage from "@/components/faq";
 import { Destinations } from "@/components/destination";
-import { MapPin } from "lucide-react";
+import { BookOpen, DollarSign, FileCheck, MapPin, Plane, Users } from "lucide-react";
 import { Contact } from "@/components/contact";
 import { ContentSectionVariant1 } from "@/components/ui/content-section2";
 import Footer from "@/components/footer";
+
+
 
 export default function Home() {
   return (
