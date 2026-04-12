@@ -13,7 +13,7 @@ export const ukCountryData: CountryData = {
   region: 'English Speaking',
 
   visa: {
-    title: 'Student Visa (Subclass 4)',
+    title: 'Student Visa (Tier 4)',
     types: [
       {
         name: 'Student Visa',
@@ -22,9 +22,9 @@ export const ukCountryData: CountryData = {
         requirements: [
           'Conditional or unconditional offer from a registered UK university',
           'Proof of financial support (GBP 15,000-25,000 per year)',
-          'English language proficiency (IELTS 6.0-7.0 or equivalent)',
-          'Health and character requirements',
-          'Tuberculosis test (if required)',
+          'English language proficiency (IELTS 5.5-6.0 or equivalent)',
+        
+          'Tuberculosis test ',
         ],
       },
       {
@@ -115,7 +115,7 @@ export const ukCountryData: CountryData = {
   faqs: [
     {
       question: 'What is the minimum IELTS score required for UK universities?',
-      answer: 'Most UK universities require IELTS 6.0-7.0. Top universities like Oxford and Cambridge may require 7.0-7.5 or higher.',
+      answer: 'Most UK universities require IELTS 5.5-6.0. Top universities like Oxford and Cambridge may require 7.0-7.5 or higher.',
     },
     {
       question: 'Can international students work in the UK?',
@@ -123,11 +123,11 @@ export const ukCountryData: CountryData = {
     },
     {
       question: 'Is health insurance mandatory?',
-      answer: 'No, international students are covered by the NHS. There is no separate health insurance requirement.',
+      answer: 'Yes, international students must have adequate health insurance coverage. While the NHS provides some coverage, students are required to have additional health insurance for comprehensive medical care.',
     },
     {
       question: 'What is the cost of living in the UK?',
-      answer: 'Average living costs are GBP 12,000-18,000 per year. London and other major cities are more expensive.',
+      answer: 'Average living costs are GBP 10,000-15,000 per year. London and other major cities are more expensive.',
     },
     {
       question: 'Can I stay and work after graduation?',
@@ -176,6 +176,12 @@ export const ukCountryData: CountryData = {
       period: 'Apr - Aug',
       months: 'April - August',
       type: 'Specialized programs',
+    },
+    {
+      name: 'June July',
+      period: 'Jun - Jul',
+      months: 'June - July',
+      type: 'Limited intake',
     },
   ],
 

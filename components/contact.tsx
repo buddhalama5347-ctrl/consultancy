@@ -198,7 +198,7 @@ export function Contact() {
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Address</h4>
                   <p className="text-foreground/70">
-                    Swaraswatinagar, Chabahil
+                    Saraswatinagar, Chabahil
                     <br />
                   </p>
                 </div>

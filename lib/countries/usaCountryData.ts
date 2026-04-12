@@ -22,7 +22,7 @@ export const usaCountryData: CountryData = {
         requirements: [
           'Acceptance from SEVIS-approved institution',
           'Proof of financial support',
-          'English proficiency (TOEFL/IELTS)',
+          'English proficiency (TOEFL/IELTS/PTE)',
           'Medical examination',
           'Valid passport',
         ],
@@ -114,7 +114,7 @@ export const usaCountryData: CountryData = {
   faqs: [
     {
       question: 'What tests are required for US universities?',
-      answer: 'TOEFL or IELTS for English proficiency, SAT/ACT for undergraduate, GRE/GMAT for graduate programs.',
+      answer: 'TOEFL ,PTE OR IELTS for English proficiency, SAT/ACT for undergraduate, GRE/GMAT for graduate programs.',
     },
     {
       question: 'Can I work while studying in the US?',
@@ -160,8 +160,8 @@ export const usaCountryData: CountryData = {
     },
     {
       name: 'Summer',
-      period: 'Jun - Aug',
-      months: 'June - August',
+      period: 'Jun - Jul- Aug',
+      months: 'June - July - August',
       type: 'Minor intake',
     },
   ],
@@ -229,7 +229,7 @@ export const usaCountryData: CountryData = {
   requirements: [
     'High school diploma or equivalent',
     'Academic transcripts',
-    'English language proficiency (TOEFL/IELTS)',
+    'English language proficiency (TOEFL/IELTS/PTE)',
     'Standardized test scores (SAT/ACT/GRE/GMAT)',
     'Letters of recommendation',
     'Personal statement/essay',

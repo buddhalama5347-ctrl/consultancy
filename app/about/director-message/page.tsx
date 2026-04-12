@@ -17,7 +17,7 @@ export default function DirectorMessagePage() {
           <div className="max-w-3xl">
             <p className="text-primary text-sm uppercase tracking-widest font-medium mb-6">  About Our Consultancy</p>
             <h2 className="text-5xl font-light text-foreground mb-6 leading-tight">
-            Messagge from our Managing Director
+            Messagge from our Director
             </h2>
             <p className="text-xl text-foreground/70 leading-relaxed mb-8">
 A personal note from our founder on why we do what we do.
@@ -48,7 +48,7 @@ A personal note from our founder on why we do what we do.
               />
               <div className="mt-8 text-center">
                 <h3 className="font-display text-3xl font-bold text-foreground">Mr. Pasang Lama</h3>
-                <p className="text-gold text-lg font-semibold mt-2">Managing Director & Founder</p>
+                <p className="text-gold text-lg font-semibold mt-2">Director & Founder</p>
               </div>
 
               {/* Achievements */}

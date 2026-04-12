@@ -75,7 +75,41 @@ export function Header() {
 										</Link>
 									</NavigationMenuLink>
 								</NavigationMenuItem>
-								<NavigationMenuItem>								<NavigationMenuTrigger className="px-4">About</NavigationMenuTrigger>
+								<NavigationMenuItem>	<NavigationMenuTrigger className="px-4">Services</NavigationMenuTrigger>
+								<NavigationMenuContent>
+									<div className="w-64 p-4">
+										<div className="space-y-2">
+											<NavigationMenuLink asChild>
+												<Link href="/services" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground font-semibold">
+													All Services
+												</Link>
+											</NavigationMenuLink>
+											<div className="border-t my-2"></div>
+											<NavigationMenuLink asChild>
+												<Link href="/services/university-counseling" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													University Counseling
+												</Link>
+											</NavigationMenuLink>
+											<NavigationMenuLink asChild>
+												<Link href="/services/visa-assistance" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													Visa Assistance
+												</Link>
+											</NavigationMenuLink>
+											<NavigationMenuLink asChild>
+												<Link href="/services/interview-coaching" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													Interview Coaching
+												</Link>
+											</NavigationMenuLink>
+											<NavigationMenuLink asChild>
+												<Link href="/services/country-guidance" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
+													Country Guidance
+												</Link>
+											</NavigationMenuLink>
+										</div>
+									</div>
+								</NavigationMenuContent>
+							</NavigationMenuItem>
+								<NavigationMenuItem>	<NavigationMenuTrigger className="px-4">About US</NavigationMenuTrigger>
 								<NavigationMenuContent>
 									<div className="w-64 p-4">
 										<div className="space-y-2">
@@ -139,6 +173,23 @@ export function Header() {
 					</Link>				<Link href="/universities" className="text-sm hover:bg-accent rounded-md p-2">
 					Universities
 				</Link>					<div className="space-y-2">
+						<Link href="/services" className="text-sm hover:bg-accent rounded-md p-2 block font-semibold">
+							Services - Main
+						</Link>
+						<Link href="/services/university-counseling" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
+							University Counseling
+						</Link>
+						<Link href="/services/visa-assistance" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
+							Visa Assistance
+						</Link>
+						<Link href="/services/interview-coaching" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
+							Interview Coaching
+						</Link>
+						<Link href="/services/country-guidance" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
+							Country Guidance
+						</Link>
+					</div>
+					<div className="space-y-2">
 						<Link href="/about" className="text-sm hover:bg-accent rounded-md p-2 block">
 							About - Introduction
 						</Link>

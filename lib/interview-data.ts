@@ -522,19 +522,19 @@ export const interviewData: Record<InterviewCountry, InterviewGuide> = {
     documentChecklist: [
       'Valid passport',
       'Confirmation of Enrollment (CoE)',
-      'Visa approval notification',
+    
       'Proof of financial capacity',
-      'Academic transcripts',
-      'English language test results (IELTS/TOEFL)',
+      'Academic doucuments',
+      'English language test results (IELTS/TOEFL/PTE)',
       'Birth certificate',
       'Police clearance certificate',
       'Health examination (if required)',
       'Vaccination records',
-      'Character reference',
+    
       'Proof of accommodation',
-      'Travel insurance documentation',
+      'Travel insurance documentation(OSHC)',
       'Previous visa history',
-      'Student ID and enrollment confirmation'
+  
     ],
   },
   japan: {

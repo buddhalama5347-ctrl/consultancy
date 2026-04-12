@@ -24,7 +24,7 @@ export const ausCountryData: CountryData = {
           'Proof of financial support (AUD $20,290 per year)',
           'English language proficiency (IELTS 6.0 or equivalent)',
           'Health and character requirements',
-          'GTE (Genuine Temporary Entrant) letter',
+          'Genuine Student Requirement ',
         ],
       },
       {
@@ -119,7 +119,7 @@ export const ausCountryData: CountryData = {
     },
     {
       question: 'Can international students work in Australia?',
-      answer: 'Yes, Student visa holders can work up to 20 hours per week during semester and full-time during semester breaks.',
+      answer: 'Yes, Student visa holders can work up to 24 hours per week during semester and full-time during semester breaks.',
     },
     {
       question: 'Is health insurance mandatory?',
@@ -160,19 +160,19 @@ export const ausCountryData: CountryData = {
 
   intakes: [
     {
-      name: 'February (Semester 1)',
+      name: 'February ',
       period: 'Feb - Jun',
       months: 'February - June',
       type: 'Major intake',
     },
     {
-      name: 'July (Semester 2)',
-      period: 'Jul - Nov',
-      months: 'July - November',
+      name: 'June July',
+      period: 'Jun - Jul',
+      months: 'June - July',
       type: 'Major intake',
     },
     {
-      name: 'November (Trimester)',
+      name: 'November ',
       period: 'Nov - Feb',
       months: 'November - February',
       type: 'Minor intake',
@@ -210,6 +210,13 @@ export const ausCountryData: CountryData = {
       maxAmount: 'AUD 55,000',
       average: 'AUD 37,500',
       notes: 'Research programs may have different fee structures',
+    },
+    {
+      item: 'Living Expenses (Per Year)',
+      minAmount: 'AUD 29,710',
+      maxAmount: 'AUD 35,000',
+      average: 'AUD 25,500',
+      notes: 'Includes accommodation, food, transportation, and miscellaneous expenses',
     },
     {
       item: 'Overseas Student Health Cover (Per Year)',
@@ -256,11 +263,15 @@ export const ausCountryData: CountryData = {
   ],
 
   requirements: [
-    'Academic transcripts and certificates (SLC/SEE, +2 Bachelor\'s)',
+    
+    'Academic Requirements',
+    'English Language Proficiency',
+     'Valid passport',
     'IELTS 6.0-6.5 overall (or PTE 50-58)',
     'Statement of Purpose (SOP)',
     'Letters of Recommendation (LOR)',
-    'Financial proof (GTE requirement)',
-    'Valid passport',
+    'Financial proof ',
+    'Genuine Student Requirement (GSR)'
+   
   ],
 };
