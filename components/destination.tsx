@@ -22,11 +22,11 @@ const destinations = [
     color: 'from-yellow-600 to-orange-500',
   },
   {
-    name: 'Japan',
-    slug: 'japan',
+    name: 'United Kingdom',
+    slug: 'united-kingdom',
     universities: 100,
-    image: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    highlights: ['Todai', 'Kyoto', 'Osaka'],
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Ds',
+    highlights: ['Oxford', 'Cambridge', 'London School of Economics'],
     color: 'from-red-500 to-orange-400',
   },
  

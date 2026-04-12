@@ -1,6 +1,6 @@
-import { AboutHero } from "@/components/about-hero";
+
 import { Quote, Award, BookOpen, Globe } from "lucide-react";
-import { Header } from "@/components/header-3";
+
 const achievements = [
   { icon: Award, label: "MBA from London Business School" },
   { icon: Globe, label: "Studied in 3 countries" },
@@ -10,7 +10,7 @@ const achievements = [
 export default function DirectorMessagePage() {
   return (
     <>
-      <Header />
+     
       <div className="min-h-screen bg-background">
    <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16 pt-40">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
