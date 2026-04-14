@@ -144,7 +144,7 @@ export default function FloatingServices() {
                 {/* Center Student Image Placeholder */}
                 <div className="text-center">
                   <img
-                    src="boy.png"
+                    src="/boy.png"
                     className="absolute top-[-180] left-[15] max-[768px]:top-[-150]"
                   ></img>
                   <p className="text-white font-semibold">Your Success</p>a
