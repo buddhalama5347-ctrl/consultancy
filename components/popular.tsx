@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { BookOpen, FileCheck, Plane, Users } from "lucide-react";
 
 const floatingServices = [
@@ -45,7 +45,7 @@ export default function FloatingServices() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const updateRadius = () => {
       setRadius(window.innerWidth <= 502 ? 98 : 160);
     };
