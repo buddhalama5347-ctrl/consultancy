@@ -36,13 +36,22 @@ const floatingServices = [
 
 export default function FloatingServices() {
   const [activeIndex, setActiveIndex] = useState(0);
-  
+  const [radius, setRadius] = useState(160);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % floatingServices.length);
     }, 5000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const updateRadius = () => {
+      setRadius(window.innerWidth <= 502 ? 98 : 160);
+    };
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+    return () => window.removeEventListener("resize", updateRadius);
   }, []);
 
   return (
@@ -149,7 +158,6 @@ export default function FloatingServices() {
               const Icon = service.icon;
               const isActive = index === activeIndex;
               const angle = index * 90 * (Math.PI / 180);
-             const radius = window.innerWidth <= 502 ? 98 : 160;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
 
