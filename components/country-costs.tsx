@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 interface CostItem {
   item: string;
@@ -25,32 +25,36 @@ const exchangeRates: Record<string, number> = {
 
 function convertToNPR(amount: string, currency: string): string {
   const rate = exchangeRates[currency] || 1;
-  
+
   // Handle ranges like "JPY 1,500,000 - JPY 3,500,000 per year"
-  if (amount.includes('-')) {
-    const parts = amount.split('-').map(part => part.trim());
-    const convertedParts = parts.map(part => {
-      const numericAmount = parseFloat(part.replace(/[^\d.]/g, ''));
+  if (amount.includes("-")) {
+    const parts = amount.split("-").map((part) => part.trim());
+    const convertedParts = parts.map((part) => {
+      const numericAmount = parseFloat(part.replace(/[^\d.]/g, ""));
       if (isNaN(numericAmount)) return part;
       const nprAmount = Math.round(numericAmount * rate);
       // Replace the original currency amount with NPR
       return part.replace(/\d[\d,]*/, `NPR ${nprAmount.toLocaleString()}`);
     });
-    return convertedParts.join(' - ');
+    return convertedParts.join(" - ");
   }
-  
+
   // Handle single amounts
-  const numericAmount = parseFloat(amount.replace(/[^\d.]/g, ''));
+  const numericAmount = parseFloat(amount.replace(/[^\d.]/g, ""));
   if (isNaN(numericAmount)) return amount;
   const nprAmount = Math.round(numericAmount * rate);
   return `NPR ${nprAmount.toLocaleString()}`;
 }
 
-export function CountryCosts({ costs, currency, totalEstimate, note }: CountryCostsProps) {
+export function CountryCosts({
+  costs,
+  currency,
+  totalEstimate,
+  note,
+}: CountryCostsProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white px-6">
       <div className="container mx-auto max-w-7xl ">
-
         {/* Header */}
         <div className="mb-16">
           <p className="text-primary text-sm font-medium uppercase tracking-widest mb-3">
@@ -60,7 +64,8 @@ export function CountryCosts({ costs, currency, totalEstimate, note }: CountryCo
             Estimated Costs in {currency} & NPR
           </h2>
           <p className="text-lg text-foreground/70">
-            Detailed breakdown of tuition, living expenses, and other costs for international students (with NPR conversion for Nepal-based clients)
+            Detailed breakdown of tuition, living expenses, and other costs for
+            international students (with NPR conversion for Nepal-based clients)
           </p>
         </div>
 
@@ -91,7 +96,7 @@ export function CountryCosts({ costs, currency, totalEstimate, note }: CountryCo
                 <tr
                   key={index}
                   className={`border-b border-gray-100 transition-colors hover:bg-gray-50 ${
-                    index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
+                    index % 2 === 0 ? "bg-white" : "bg-gray-50/50"
                   }`}
                 >
                   <td className="px-6 py-5 text-sm font-semibold text-foreground">
@@ -99,18 +104,24 @@ export function CountryCosts({ costs, currency, totalEstimate, note }: CountryCo
                   </td>
                   <td className="px-6 py-5 text-sm text-foreground/70">
                     <div>{cost.minAmount}</div>
-                    <div className="text-xs text-primary font-medium">{convertToNPR(cost.minAmount, currency)}</div>
+                    <div className="text-xs text-primary font-medium">
+                      {convertToNPR(cost.minAmount, currency)}
+                    </div>
                   </td>
                   <td className="px-6 py-5 text-sm text-foreground/70">
                     <div>{cost.maxAmount}</div>
-                    <div className="text-xs text-primary font-medium">{convertToNPR(cost.maxAmount, currency)}</div>
+                    <div className="text-xs text-primary font-medium">
+                      {convertToNPR(cost.maxAmount, currency)}
+                    </div>
                   </td>
                   <td className="px-6 py-5 text-sm font-semibold text-primary">
                     <div>{cost.average}</div>
-                    <div className="text-xs text-primary font-medium">{convertToNPR(cost.average, currency)}</div>
+                    <div className="text-xs text-primary font-medium">
+                      {convertToNPR(cost.average, currency)}
+                    </div>
                   </td>
                   <td className="px-6 py-5 text-xs text-foreground/60">
-                    {cost.notes || '—'}
+                    {cost.notes || "—"}
                   </td>
                 </tr>
               ))}
@@ -120,38 +131,40 @@ export function CountryCosts({ costs, currency, totalEstimate, note }: CountryCo
 
         {/* Total Estimate */}
 
-        <div className="relative">
-             <img src  = "/mono.png" className="absolute right-0 top-[-0] w-90"  ></img>
-       
-        {totalEstimate && (
-          <div className="mt-8 rounded-lg p-6">
-            <div className="flex justify-between items-center">
-              <div>
-                <p className="text-sm text-foreground/70 font-medium uppercase tracking-widest mb-1">
-                  Estimated Total (Per Year)
-                </p>
-                <p className="text-3xl font-bold text-primary">
-                  {totalEstimate}
-                </p>
-                <p className="text-lg font-semibold text-primary/80 mt-1">
-                  {convertToNPR(totalEstimate, currency)}
-                </p>
-              </div>
-             
-            </div>
-          </div>
-        )}
+        <div className="relative flex flex-col lg:flex-row-reverse justify-between items-center mt-10">
+          <img src="/mono.png" className=" w-90"></img>
 
-        {/* Note */}
-        {note && (
-          <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex gap-3 max-w-3xl">
-            <span className="text-xl flex-shrink-0">📍</span>
-            <p className="text-sm text-foreground/70">
-              {note}
-            </p>
-          </div>
-        )}
-         </div>
+          <div>
+            
+         
+
+          {totalEstimate && (
+            <div className="mt-8 rounded-lg p-6">
+              <div className="flex justify-between items-center">
+                <div>
+                  <p className="text-sm text-foreground/70 font-medium uppercase tracking-widest mb-1">
+                    Estimated Total (Per Year)
+                  </p>
+                  <p className="text-3xl font-bold text-primary">
+                    {totalEstimate}
+                  </p>
+                  <p className="text-lg font-semibold text-primary/80 mt-1">
+                    {convertToNPR(totalEstimate, currency)}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Note */}
+          {note && (
+            <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex gap-3 max-w-3xl">
+              <span className="text-xl flex-shrink-0">📍</span>
+              <p className="text-sm text-foreground/70">{note}</p>
+            </div>
+          )}
+           </div>
+        </div>
       </div>
     </section>
   );

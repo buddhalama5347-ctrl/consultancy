@@ -8,7 +8,7 @@ export default function VidMed() {
 
      
      
-<video className="w-full h-full object-cover object-[50%_40%]" src="vdeo.mp4" autoPlay muted loop playsInline controls />
+<video className="w-full h-full object-cover object-[50%_40%]" src="/vdeo.mp4" autoPlay muted loop playsInline controls />
 
       {/* <div className="absolute inset-0 bg-black/40" /> */}
 

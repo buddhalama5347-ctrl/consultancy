@@ -36,6 +36,7 @@ const floatingServices = [
 
 export default function FloatingServices() {
   const [activeIndex, setActiveIndex] = useState(0);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -135,7 +136,7 @@ export default function FloatingServices() {
                 <div className="text-center">
                   <img
                     src="boy.png"
-                    className="absolute top-[-180] left-[15]"
+                    className="absolute top-[-180] left-[15] max-[768px]:top-[-150]"
                   ></img>
                   <p className="text-white font-semibold">Your Success</p>a
                   <p className="text-white/80 text-sm">Our Mission</p>
@@ -148,7 +149,7 @@ export default function FloatingServices() {
               const Icon = service.icon;
               const isActive = index === activeIndex;
               const angle = index * 90 * (Math.PI / 180);
-              const radius = 160; // Distance from center
+             const radius = window.innerWidth <= 502 ? 98 : 160;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
 
@@ -163,17 +164,17 @@ export default function FloatingServices() {
                   }}
                 >
                   <div
-                    className={`bg-white rounded-lg shadow-lg p-4 flex items-center gap-3 hover:shadow-xl transition-all duration-300 cursor-pointer group ${isActive ? "scale-110 shadow-2xl" : "hover:scale-105"
+                    className={`  bg-white rounded-lg shadow-lg p-4 flex items-center gap-3 hover:shadow-xl transition-all duration-300 cursor-pointer group ${isActive ? "scale-110 shadow-2xl" : "hover:scale-105"
                       }`}
                     onClick={() => setActiveIndex(index)}
                   >
                     <div
-                      className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center text-white flex-shrink-0 group-hover:shadow-lg transition-shadow`}
+                      className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center text-white flex-shrink-0 group-hover:shadow-lg transition-shadow max-[502px]:w-8 max-[502px]:h-8`}
                     >
                       <Icon className="w-6 h-6" />
                     </div>
                     <div className="whitespace-nowrap">
-                      <p className="text-sm font-semibold text-foreground">
+                      <p className="text-sm font-semibold text-foreground max-[502px]:text-xs">
                         {service.title}
                       </p>
                     </div>

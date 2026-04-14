@@ -24,7 +24,7 @@ export function CountryHero({ country }: { country: CountryData }) {
           </button>
         </Link>
 
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 w-full">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 w-full mt-20">
           <div className="max-w-3xl">
             <p className="text-white/80 text-sm uppercase tracking-widest mb-6">Study Destination</p>
             <h2 className="text-6xl font-light text-white mb-6 leading-tight">{country.name}</h2>

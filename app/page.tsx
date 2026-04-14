@@ -23,9 +23,9 @@ export default function Home() {
     <>
       <VidMed />
       <FloatingServices />
-      <div className=" [@media(max-width:500px)]:px-3 bg-white">
+     
          <Banner />
-        </div>
+      
      
       <section className="mt-20">
         <section className="container mx-auto">
