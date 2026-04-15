@@ -122,13 +122,14 @@ export default function Home() {
         <div className="w-full h-[80vh] container mx-auto">
           {" "}
           {/* 80% of viewport height */}
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d904914.6121614472!2d84.4683838!3d27.6300072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb097e4cd654ed%3A0xf37f9e8e26ccbdf8!2sKBA%20Global%20Immigration%20And%20migration!5e0!3m2!1sen!2snp!4v1774951074829!5m2!1sen!2snp"
-            className="w-full h-full"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          
+        <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14128.093647291169!2d85.33895364041445!3d27.716563414575944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb872f387194d235%3A0xe89bfd182ab91816!2sExact%20Education%20%26%20Visa%20Services!5e0!3m2!1sen!2snp!4v1776265478502!5m2!1sen!2snp"
+  className="w-full h-full"
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
         </div>
       </main>
      
