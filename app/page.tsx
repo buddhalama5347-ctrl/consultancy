@@ -3,18 +3,17 @@ import Testimonials from "@/components/demo";
 import { ContentSectionVariant2 } from "@/components/ui/content-section";
 
 import { Services } from "@/components/services";
-import { Header } from "@/components/header-3";
-import AboutDemo from "@/components/aboutdemo";
+
 import VidMed from "@/components/vidmed";
 
 import FloatingServices from "@/components/popular";
 import Banner from "@/components/banner";
 import FAQPage from "@/components/faq";
 import { Destinations } from "@/components/destination";
-import { BookOpen, DollarSign, FileCheck, MapPin, Plane, Users } from "lucide-react";
+import {  MapPin, } from "lucide-react";
 import { Contact } from "@/components/contact";
 import { ContentSectionVariant1 } from "@/components/ui/content-section2";
-import Footer from "@/components/footer";
+
 
 
 

@@ -6,19 +6,19 @@ import { motion } from "motion/react";
 const testimonials = [
   {
     text: "The entire process from university selection to visa approval was smooth and stress-free. Highly professional team.",
-    image: "/bipul.jpg",
+    image: "/bipul.JPG",
     name: "Bipul Gurung",
     role: "Student – Australia",
   },
   {
     text: "They guided me step by step and helped me secure admission in the UK. Everything was clearly explained.",
-    image: "/sosal.jpg",
+    image: "/sosal.JPG",
     name: "Sosal Basnet",
     role: "Student – UK",
   },
   {
     text: "Ramro xha , visa pani easily approve bhayo. Ma ekdam satisfied chu uniharuko service sanga.",
-    image: "/dewasis.jpg",
+    image: "/dewasis.JPG",
     name: "Dewasis Shrestha",
     role: "Student – Canada",
   },
