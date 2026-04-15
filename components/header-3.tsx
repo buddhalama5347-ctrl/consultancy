@@ -50,7 +50,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null)
-  const timeoutRef = useRef<NodeJS.Timeout>()
+ const timeoutRef = useRef<NodeJS.Timeout | null>(null)
   const scrolled = useScroll(10)
 
   useEffect(() => {
@@ -64,10 +64,10 @@ export function Header() {
     }
   }, [mobileOpen])
 
-  const handleMouseEnter = (label: string) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    setOpenDropdown(label)
-  }
+const handleMouseEnter = (label: string) => {
+  if (timeoutRef.current) clearTimeout(timeoutRef.current)
+  setOpenDropdown(label)
+}
 
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {

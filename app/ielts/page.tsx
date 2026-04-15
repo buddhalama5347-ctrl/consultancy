@@ -2,12 +2,7 @@ import { BookOpen, Clock, Award, Users, CheckCircle, ChevronRight, Star, Target,
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import FAQPage from "@/components/faq";
-// import {
-//   Accordion,
-//   AccordionContent,
-//   AccordionItem,
-//   AccordionTrigger,
-// } from "@/components/ui/accordion";
+
 
 const bandScores = [
   { band: 9, level: "Expert User", description: "Complete command of English with full accuracy and fluency" },

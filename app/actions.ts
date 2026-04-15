@@ -23,14 +23,14 @@ export async function sendContactEmail(formData: {
       throw new Error('RESEND_API_KEY is not configured');
     }
 
-    console.log('Sending email to:', 'buddhalama5347@gmail.com');
+    console.log('Sending email to:', 'Chabahil@exactedunp.com');
     console.log('From:', formData.email);
     console.log('Subject:', `New Contact Form Submission from ${formData.name}`);
 
     // Send email to your Gmail
     const result = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'buddhalama5347@gmail.com',
+      to: 'Chabahil@exactedunp.com',
       replyTo: formData.email,
       subject: `New Contact Form Submission from ${formData.name}`,
       html: `
@@ -92,14 +92,14 @@ export async function sendApplicationEmail(formData: {
       throw new Error('RESEND_API_KEY is not configured');
     }
 
-    console.log('Sending application email to:', 'buddhalama5347@gmail.com');
+    console.log('Sending application email to:', 'Chabahil@exactedunp.com');
     console.log('From:', formData.email);
     console.log('Subject:', `New Online Application from ${formData.fullname}`);
 
     // Send email to your Gmail
     const result = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'buddhalama5347@gmail.com',
+      to: 'Chabahil@exactedunp.com',
       replyTo: formData.email,
       subject: `New Online Application from ${formData.fullname}`,
       html: `

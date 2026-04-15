@@ -1,6 +1,5 @@
 import {
-  BookOpen,
-  Clock,
+ 
   Award,
   Users,
   CheckCircle,
@@ -10,18 +9,13 @@ import {
   Monitor,
   Zap,
   Headphones,
-  PenTool,
+ 
   Eye,
   MessageSquare,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 import FAQPage from "@/components/faq";
 
 const testModules = [
