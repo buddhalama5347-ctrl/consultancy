@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
+import { sendContactEmail } from "@/app/actions";
 
 
 
@@ -29,16 +30,32 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submitted with data:", formData);
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      setIsSubmitting(false);
+    try {
+      console.log("Calling sendContactEmail...");
+      const result = await sendContactEmail(formData);
+      console.log("Server response:", result);
+      
+      if (result.success) {
+        console.log("Email sent successfully!");
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+      } else {
+        console.log("Email failed:", result.message);
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+      }
+    } catch (error) {
+      console.error("Caught error:", error);
+      setSubmitStatus("error");
       setTimeout(() => setSubmitStatus("idle"), 5000);
-    }, 1000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -143,6 +160,12 @@ export function Contact() {
                       Thank you! We will get back to you soon.
                     </div>
                   )}
+
+                  {submitStatus === "error" && (
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                      Failed to send message. Please try again.
+                    </div>
+                  )}
                 </form>
               </div>
             </div>
@@ -160,7 +183,7 @@ export function Contact() {
 
               <div className="flex gap-4 items-start">
                 <div className="p-3  bg-blue-500/10  rounded-lg">
-                  <Phone className="w-6 h-6 text-primary" />
+                  <Phone className="w-6 h-6 text-[#101010]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Phone</h4>
@@ -183,7 +206,7 @@ export function Contact() {
 
               <div className="flex gap-4 items-start">
                 <div className="p-3   bg-blue-500/10 rounded-lg">
-                  <Mail className="w-6 h-6 text-primary" />
+                  <Mail className="w-6 h-6 text-[#0F0F0F]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Email</h4>
@@ -193,7 +216,7 @@ export function Contact() {
 
               <div className="flex gap-4 items-start">
                 <div className="p-3 bg-blue-500/10  rounded-lg">
-                  <MapPin className="w-6 h-6 text-primary" />
+                  <MapPin className="w-6 h-6 text-[#0F0F0F]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Address</h4>

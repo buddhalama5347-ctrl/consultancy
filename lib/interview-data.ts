@@ -39,7 +39,7 @@ export const interviewData: Record<InterviewCountry, InterviewGuide> = {
   usa: {
     country: 'United States',
     slug: 'usa',
-    backgroundImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop',
+    backgroundImage: 'https://images.unsplash.com/photo-1618420138990-25842589a7c4?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     overview: 'US university interviews focus on understanding your motivations, personality, and fit for the institution. They are often conversational and less formal, emphasizing your experiences and aspirations.',
     interviewFormat: {
       type: 'Informational & Behavioral',
@@ -210,7 +210,7 @@ export const interviewData: Record<InterviewCountry, InterviewGuide> = {
   uk: {
     country: 'United Kingdom',
     slug: 'uk',
-    backgroundImage: 'https://images.unsplash.com/photo-1486299219397-fd02e16de0fb?w=1200&h=600&fit=crop',
+    backgroundImage: 'https://images.unsplash.com/photo-1654452530992-43c5a7c5ab37?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     overview: 'UK university interviews, especially at Oxford and Cambridge, are highly academic and challenging. They assess your depth of knowledge, analytical thinking, and ability to engage in intellectual debate.',
     interviewFormat: {
       type: 'Academic & Tutorial Style',
@@ -381,7 +381,7 @@ export const interviewData: Record<InterviewCountry, InterviewGuide> = {
   australia: {
     country: 'Australia',
     slug: 'australia',
-    backgroundImage: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=600&fit=crop',
+    backgroundImage: 'https://images.unsplash.com/photo-1663643632701-93bdd8c02f41?q=80&w=393&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     overview: 'Australian university interviews are less formal than UK but more structured than US. They assess your fit for the program, communication skills, and practical understanding of your field. The tone is friendly but professional.',
     interviewFormat: {
       type: 'Program-Focused & Conversational',
@@ -540,7 +540,7 @@ export const interviewData: Record<InterviewCountry, InterviewGuide> = {
   japan: {
     country: 'Japan',
     slug: 'japan',
-    backgroundImage: 'https://images.unsplash.com/photo-1540959375944-7049f642e9f1?w=1200&h=600&fit=crop',
+    backgroundImage: 'https://images.unsplash.com/photo-1643611159961-95e59698de60?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     overview: 'Japanese university interviews emphasize respect, clarity, and genuine interest in both the institution and Japanese culture. They often include practical skills assessment and value students who show commitment to understanding Japan.',
     interviewFormat: {
       type: 'Formal & Structured',

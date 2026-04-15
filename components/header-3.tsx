@@ -1,303 +1,302 @@
-'use client';
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { MenuToggleIcon } from '@/components/menu-toggle-icon';
-import { createPortal } from 'react-dom';
-import {
-	NavigationMenu,
-	NavigationMenuContent,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
-import { LucideIcon } from 'lucide-react';
-import Link from "next/link"
+'use client'
 
-type LinkItem = {
-	title: string;
-	href: string;
-	icon: LucideIcon;
-	description?: string;
-};
+import { useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
+import { ChevronDown } from 'lucide-react'
+import { MenuToggleIcon } from '@/components/menu-toggle-icon'
+import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+
+interface SubLink {
+  label: string
+  href: string
+  subLinks?: SubLink[]
+}
+
+interface NavLink {
+  label: string
+  href?: string
+  subLinks?: SubLink[]
+}
+
+const navLinks: NavLink[] = [
+  { label: 'Home', href: '/' },
+  { label: 'Destinations', href: '/destinations' },
+  { label: 'Universities', href: '/universities' },
+  {
+    label: 'Services',
+    subLinks: [
+      {
+        label: 'English Test',
+        href: '/ielts',
+        subLinks: [
+          { label: 'IELTS', href: '/ielts' },
+          { label: 'PTE', href: '/pte' },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'About Us',
+    subLinks: [
+      { label: 'Introduction', href: '/about' },
+      { label: 'Our Team', href: '/about/our-team' },
+    ],
+  },
+  { label: 'Interview Preparation', href: '/interview-preparation' },
+]
 
 export function Header() {
-	const [open, setOpen] = React.useState(false);
-	const scrolled = useScroll(10);
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null)
+  const timeoutRef = useRef<NodeJS.Timeout>()
+  const scrolled = useScroll(10)
 
-	React.useEffect(() => {
-		if (open) {
-			document.body.style.overflow = 'hidden';
-		} else {
-			document.body.style.overflow = '';
-		}
-		return () => {
-			document.body.style.overflow = '';
-		};
-	}, [open]);
-
-	return (
-		<header
-  className={cn(
-    'fixed top-0 z-50 w-full border-b border-border bg-background/95 supports-[backdrop-filter]:bg-background/50 backdrop-blur-lg',
-    {
-      // optional: change style slightly when scrolled
-      'shadow-sm': scrolled,
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
     }
-  )}
->
-			<nav className="mx-auto flex h-16 w-full  max-w-7xl items-center justify-between px-4 ">
-				<div className="flex items-center gap-5">
-					<a href="#" className="hover:bg-accent rounded-md p-2">
-						{/* <WordmarkIcon className="h-4" /> */}
-						<img src="/logo2nobg.png" alt="Company Logo" className="h-15 object-contain" />
-					</a>
-					<NavigationMenu className="hidden md:flex">
-						<NavigationMenuList>
-							<NavigationMenuItem>
-								<NavigationMenuLink className="px-4" asChild>
-									<Link href="/" className="hover:bg-accent rounded-md p-2">
-										Home
-									</Link>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<NavigationMenuLink className="px-4" asChild>
-									<Link href="/destinations" className="hover:bg-accent rounded-md p-2">
-										Destinations
-									</Link>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-							<NavigationMenuItem>									<NavigationMenuLink className="px-4" asChild>
-										<Link href="/universities" className="hover:bg-accent rounded-md p-2">
-											Universities
-										</Link>
-									</NavigationMenuLink>
-								</NavigationMenuItem>
-								<NavigationMenuItem>	<NavigationMenuTrigger className="px-4">Services</NavigationMenuTrigger>
-								<NavigationMenuContent>
-									<div className="w-64 p-4">
-										<div className="space-y-2">
-											<NavigationMenuLink asChild>
-												<Link href="/services" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground font-semibold">
-													All Services
-												</Link>
-											</NavigationMenuLink>
-											<div className="border-t my-2"></div>
-											<NavigationMenuLink asChild>
-												<Link href="/services/university-counseling" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													University Counseling
-												</Link>
-											</NavigationMenuLink>
-											<NavigationMenuLink asChild>
-												<Link href="/services/visa-assistance" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													Visa Assistance
-												</Link>
-											</NavigationMenuLink>
-											<NavigationMenuLink asChild>
-												<Link href="/services/interview-coaching" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													Interview Coaching
-												</Link>
-											</NavigationMenuLink>
-											<NavigationMenuLink asChild>
-												<Link href="/services/country-guidance" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													Country Guidance
-												</Link>
-											</NavigationMenuLink>
-										</div>
-									</div>
-								</NavigationMenuContent>
-							</NavigationMenuItem>
-								<NavigationMenuItem>	<NavigationMenuTrigger className="px-4">About US</NavigationMenuTrigger>
-								<NavigationMenuContent>
-									<div className="w-64 p-4">
-										<div className="space-y-2">
-											<NavigationMenuLink asChild>
-												<Link href="/about" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													Introduction
-												</Link>
-											</NavigationMenuLink>
-											<NavigationMenuLink asChild>
-												<Link href="/about/director-message" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													Director Message
-												</Link>
-											</NavigationMenuLink>
-											<NavigationMenuLink asChild>
-												<Link href="/about/why-choose-us" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													Why Choose Us
-												</Link>
-											</NavigationMenuLink>
-											<NavigationMenuLink asChild>
-												<Link href="/about/our-team" className="block px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground">
-													Our Team
-												</Link>
-											</NavigationMenuLink>
-										</div>
-									</div>
-								</NavigationMenuContent>
-							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<NavigationMenuLink className="px-4" asChild>
-									<Link href="/interview-preparation" className="hover:bg-accent rounded-md p-2">
-										Interview Preparation
-									</Link>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
-						</NavigationMenuList>
-					</NavigationMenu>
-				</div>
-				<div className="hidden items-center gap-2 md:flex">
-					{/* <Button variant="outline">Sign In</Button> */}
-					<Button>Get Started</Button>
-				</div>
-				<Button
-					size="icon"
-					variant="outline"
-					onClick={() => setOpen(!open)}
-					className="md:hidden"
-					aria-expanded={open}
-					aria-controls="mobile-menu"
-					aria-label="Toggle menu"
-				>
-					<MenuToggleIcon open={open} className="size-5" duration={300} />
-				</Button>
-			</nav>
-			<MobileMenu open={open} className="flex flex-col justify-between gap-2 overflow-y-auto">
-				<div className="flex w-full flex-col gap-y-2">
-					<Link href="/" className="text-sm hover:bg-accent rounded-md p-2">
-						Home
-					</Link>
-					<Link href="/destinations" className="text-sm hover:bg-accent rounded-md p-2">
-						Destinations
-					</Link>				<Link href="/universities" className="text-sm hover:bg-accent rounded-md p-2">
-					Universities
-				</Link>					<div className="space-y-2">
-						<Link href="/services" className="text-sm hover:bg-accent rounded-md p-2 block font-semibold">
-							Services - Main
-						</Link>
-						<Link href="/services/university-counseling" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
-							University Counseling
-						</Link>
-						<Link href="/services/visa-assistance" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
-							Visa Assistance
-						</Link>
-						<Link href="/services/interview-coaching" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
-							Interview Coaching
-						</Link>
-						<Link href="/services/country-guidance" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
-							Country Guidance
-						</Link>
-					</div>
-					<div className="space-y-2">
-						<Link href="/about" className="text-sm hover:bg-accent rounded-md p-2 block">
-							About - Introduction
-						</Link>
-						<Link href="/about/director-message" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
-							Director Message
-						</Link>
-						<Link href="/about/why-choose-us" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
-							Why Choose Us
-						</Link>
-						<Link href="/about/our-team" className="text-sm hover:bg-accent rounded-md p-2 block ml-4">
-							Our Team
-						</Link>
-					</div>
-					<Link href="/interview-preparation" className="text-sm hover:bg-accent rounded-md p-2">
-						Interview Preparation
-					</Link>
-				</div>
-				<div className="flex flex-col gap-2">
-					<Button className="w-full">Get Started</Button>
-				</div>
-			</MobileMenu>
-		</header>
-	);
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileOpen])
+
+  const handleMouseEnter = (label: string) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setOpenDropdown(label)
+  }
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null)
+      setOpenSubDropdown(null)
+    }, 150)
+  }
+
+  const toggleDropdown = (label: string) => {
+    setOpenDropdown(openDropdown === label ? null : label)
+    setOpenSubDropdown(null)
+  }
+
+  const toggleSubDropdown = (label: string, e: React.MouseEvent) => {
+    e.preventDefault()
+    setOpenSubDropdown(openSubDropdown === label ? null : label)
+  }
+
+  return (
+    <header
+      className={cn(
+        'fixed top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80',
+        { 'shadow-sm': scrolled },
+      )}
+    >
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <Link href="/" className="flex-shrink-0">
+            <img src="/logo2nobg.png" alt="Company Logo" className="h-14 object-contain" />
+          </Link>
+
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <div
+                key={link.label}
+                className="relative group"
+                onMouseEnter={() => handleMouseEnter(link.label)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {link.href ? (
+                  <Link
+                    href={link.href}
+                    className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-accent transition-colors flex items-center gap-1"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-accent transition-colors flex items-center gap-1">
+                    {link.label}
+                    {link.subLinks && (
+                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                    )}
+                  </button>
+                )}
+
+                {link.subLinks && (
+                  <div
+                    className={cn(
+                      'absolute left-0 top-full mt-1 w-56 bg-popover border border-border rounded-lg shadow-lg transition-all duration-200 z-50',
+                      openDropdown === link.label
+                        ? 'opacity-100 visible'
+                        : 'opacity-0 invisible',
+                    )}
+                  >
+                    <div className="py-2">
+                      {link.subLinks.map((subLink) => (
+                        <div key={subLink.label} className="relative group/sub">
+                          {subLink.subLinks ? (
+                            <Link
+                              href={subLink.href}
+                              className="w-full px-4 py-2 text-sm text-foreground hover:bg-accent flex items-center justify-between transition-colors"
+                            >
+                              {subLink.label}
+                              <ChevronDown className="w-4 h-4 transition-transform group-hover/sub:rotate-180" />
+                            </Link>
+                          ) : (
+                            <Link
+                              href={subLink.href}
+                              className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                            >
+                              {subLink.label}
+                            </Link>
+                          )}
+
+                          {subLink.subLinks && (
+                            <div
+                              className="absolute left-full top-0 ml-2 w-52 bg-popover border border-border rounded-lg shadow-lg z-50 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200"
+                            >
+                              <div className="py-2">
+                                {subLink.subLinks.map((deepLink) => (
+                                  <Link
+                                    key={deepLink.label}
+                                    href={deepLink.href}
+                                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                                  >
+                                    {deepLink.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden md:block">
+            <Link href="/online-application">
+              <Button>Online Application</Button>
+            </Link>
+          </div>
+
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 text-foreground hover:bg-accent rounded-lg transition-colors"
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+          >
+            <MenuToggleIcon open={mobileOpen} className="size-5" duration={300} />
+          </button>
+        </div>
+
+        {mobileOpen && (
+          <div id="mobile-menu" className="md:hidden pb-4">
+            <div className="space-y-1">
+              {navLinks.map((link) => (
+                <div key={link.label}>
+                  {link.href && !link.subLinks ? (
+                    <Link
+                      href={link.href}
+                      className="block px-4 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <>
+                      <button
+                        onClick={() => toggleDropdown(link.label)}
+                        className="w-full text-left px-4 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent transition-colors flex items-center justify-between"
+                      >
+                        {link.label}
+                        {link.subLinks && (
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform ${
+                              openDropdown === link.label ? 'rotate-180' : ''
+                            }`}
+                          />
+                        )}
+                      </button>
+
+                      {openDropdown === link.label && link.subLinks && (
+                        <div className="bg-accent/40 rounded-md ml-4 mt-1 space-y-1">
+                          {link.subLinks.map((subLink) => (
+                            <div key={subLink.label}>
+                              {subLink.subLinks ? (
+                                <>
+                                  <button
+                                    onClick={(e) => toggleSubDropdown(subLink.label, e)}
+                                    className="w-full text-left px-4 py-2 rounded-md text-sm text-foreground hover:bg-accent transition-colors flex items-center justify-between"
+                                  >
+                                    {subLink.label}
+                                    <ChevronDown
+                                      className={`w-4 h-4 transition-transform ${
+                                        openSubDropdown === subLink.label
+                                          ? 'rotate-180'
+                                          : ''
+                                      }`}
+                                    />
+                                  </button>
+
+                                  {openSubDropdown === subLink.label && (
+                                    <div className="bg-accent/60 rounded-md ml-4 mt-1 space-y-1">
+                                      {subLink.subLinks.map((deepLink) => (
+                                        <Link
+                                          key={deepLink.label}
+                                          href={deepLink.href}
+                                          className="block px-4 py-2 rounded-md text-sm text-foreground hover:bg-accent transition-colors"
+                                          onClick={() => setMobileOpen(false)}
+                                        >
+                                          {deepLink.label}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
+                                </>
+                              ) : (
+                                <Link
+                                  href={subLink.href}
+                                  className="block px-4 py-2 rounded-md text-sm text-foreground hover:bg-accent transition-colors"
+                                  onClick={() => setMobileOpen(false)}
+                                >
+                                  {subLink.label}
+                                </Link>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <Link href="/online-application" onClick={() => setMobileOpen(false)}>
+              <Button className="w-full mt-4">Online Application</Button>
+            </Link>
+          </div>
+        )}
+      </nav>
+    </header>
+  )
 }
-
-type MobileMenuProps = React.ComponentProps<'div'> & {
-	open: boolean;
-};
-
-function MobileMenu({ open, children, className, ...props }: MobileMenuProps) {
-	if (!open || typeof window === 'undefined') return null;
-
-	return createPortal(
-		<div
-			id="mobile-menu"
-			className={cn(
-				'bg-background/95 supports-[backdrop-filter]:bg-background/50 backdrop-blur-lg',
-				'fixed top-14 right-0 bottom-0 left-0 z-40 flex flex-col overflow-hidden border-y md:hidden',
-			)}
-		>
-			<div
-				data-slot={open ? 'open' : 'closed'}
-				className={cn(
-					'data-[slot=open]:animate-in data-[slot=open]:zoom-in-97 ease-out',
-					'size-full p-4',
-					className,
-				)}
-				{...props}
-			>
-				{children}
-			</div>
-		</div>,
-		document.body,
-	);
-}
-
-function ListItem({
-	title,
-	description,
-	icon: Icon,
-	className,
-	href,
-	...props
-}: React.ComponentProps<typeof NavigationMenuLink> & LinkItem) {
-	return (
-		<NavigationMenuLink className={cn('w-full flex flex-row gap-x-2 data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground rounded-sm p-2', className)} {...props} asChild>
-			<a href={href}>
-				<div className="bg-background/40 flex aspect-square size-12 items-center justify-center rounded-md border shadow-sm">
-					<Icon className="text-foreground size-5" />
-				</div>
-				<div className="flex flex-col items-start justify-center">
-					<span className="font-medium">{title}</span>
-					<span className="text-muted-foreground text-xs">{description}</span>
-				</div>
-			</a>
-		</NavigationMenuLink>
-	);
-}
-
-
-
-
-
 
 function useScroll(threshold: number) {
-	const [scrolled, setScrolled] = React.useState(false);
+  const [scrolled, setScrolled] = useState(false)
 
-	const onScroll = React.useCallback(() => {
-		setScrolled(window.scrollY > threshold);
-	}, [threshold]);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > threshold)
+    window.addEventListener('scroll', onScroll)
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [threshold])
 
-	React.useEffect(() => {
-		window.addEventListener('scroll', onScroll);
-		return () => window.removeEventListener('scroll', onScroll);
-	}, [onScroll]);
-
-	// also check on first load
-	React.useEffect(() => {
-		onScroll();
-	}, [onScroll]);
-
-	return scrolled;
+  return scrolled
 }
-
-
-const WordmarkIcon = (props: React.ComponentProps<"svg">) => (
-  <svg viewBox="0 0 84 24" fill="currentColor" {...props}>
-    <path d="M45.035 23.984c-1.34-.062-2.566-.441-3.777-1.16-1.938-1.152-3.465-3.187-4.02-5.36-.199-.784-.238-1.128-.234-2.058 0-.691.008-.87.062-1.207.23-1.5.852-2.883 1.852-4.144.297-.371 1.023-1.09 1.41-1.387 1.399-1.082 2.84-1.68 4.406-1.816.536-.047 1.528-.02 2.047.054 1.227.184 2.227.543 3.106 1.121 1.277.84 2.5 2.184 3.367 3.7.098.168.172.308.172.312-.004 0-1.047.723-2.32 1.598l-2.711 1.867c-.61.422-2.91 2.008-2.993 2.062l-.074.047-1-1.574c-.55-.867-1.008-1.594-1.012-1.61-.007-.019.922-.648 2.188-1.476 1.215-.793 2.2-1.453 2.191-1.46-.02-.032-.508-.27-.691-.34a5 5 0 0 0-.465-.13c-.371-.09-1.105-.125-1.426-.07-1.285.219-2.336 1.3-2.777 2.852-.215.761-.242 1.636-.074 2.355.129.527.383 1.102.691 1.543.234.332.727.82 1.047 1.031.664.434 1.195.586 1.969.555.613-.023 1.027-.129 1.64-.426 1.184-.574 2.16-1.554 2.828-2.843.122-.235.208-.372.227-.368.082.032 3.77 1.938 3.79 1.961.034.032-.407.93-.696 1.414a12 12 0 0 1-1.051 1.477c-.36.422-1.102 1.14-1.492 1.445a9.9 9.9 0 0 1-3.23 1.684 9.2 9.2 0 0 1-2.95.351M74.441 23.996c-1.488-.043-2.8-.363-4.066-.992-1.687-.848-2.992-2.14-3.793-3.774-.605-1.234-.863-2.402-.863-3.894.004-1.149.176-2.156.527-3.11.14-.378.531-1.171.75-1.515 1.078-1.703 2.758-2.934 4.805-3.524.847-.242 1.465-.332 2.433-.351 1.032-.024 1.743.055 2.48.277l.31.09.007 2.48c.004 1.364 0 2.481-.008 2.481a1 1 0 0 1-.12-.055c-.688-.347-2.09-.488-2.962-.296-.754.167-1.296.453-1.785.945a3.7 3.7 0 0 0-1.043 2.11c-.047.382-.02 1.109.055 1.437a3.4 3.4 0 0 0 .941 1.738c.75.75 1.715 1.102 2.875 1.05.645-.03 1.118-.14 1.563-.366q1.721-.864 2.02-3.145c.035-.293.042-1.266.042-7.957V0H84l-.012 8.434c-.008 7.851-.011 8.457-.054 8.757-.196 1.274-.586 2.25-1.301 3.243-1.293 1.808-3.555 3.07-6.145 3.437-.664.098-1.43.14-2.047.125M9.848 23.574a14 14 0 0 1-1.137-.152c-2.352-.426-4.555-1.781-6.117-3.774-.27-.335-.75-1.05-.95-1.406-1.156-2.047-1.695-4.27-1.64-6.77.047-1.995.43-3.66 1.23-5.316.524-1.086 1.04-1.87 1.793-2.715C4.567 1.72 6.652.535 8.793.171 9.68.02 10.093 0 12.297 0h1.789v5.441l-.961.016c-2.36.04-3.441.215-4.441.719-.836.414-1.278.879-1.895 1.976-.219.399-.535 1.02-.535 1.063 0 .02 1.285.027 3.918.027h3.914v5.113h-3.914c-2.54 0-3.918.008-3.918.028 0 .05.254.597.441.953.344.656.649 1.086 1.051 1.48.668.657 1.356.985 2.445 1.16.645.106 1.274.145 2.61.16l1.285.016v5.442l-2.055-.004a120 120 0 0 1-2.183-.016M16.469 14.715c0-5.504.011-9.04.031-9.29a5.54 5.54 0 0 1 1.527-3.48c.778-.82 1.922-1.457 3.118-1.734C21.915.035 22.422 0 24.39 0h1.652v4.914h-1.426c-1.324 0-1.445.004-1.644.055-.739.191-1.059.699-1.106 1.754l-.015.355h4.191v4.914h-4.184v11.602h-5.39ZM27.023 14.727c0-5.223.012-9.04.028-9.278.129-1.98 1.234-3.68 3.012-4.62.87-.462 1.777-.716 2.851-.802A61 61 0 0 1 34.945 0h1.649v4.914h-1.426c-1.32 0-1.441.004-1.64.055-.739.191-1.063.699-1.106 1.754l-.02.355h4.192v4.914H32.41v11.602h-5.387ZM55.48 15.406V7.22h4.66v1.363c0 1.3.005 1.363.051 1.363.04 0 .075-.054.133-.203.38-.98.969-1.68 1.711-2.031.563-.266 1.422-.43 2.492-.48l.414-.02v4.914l-.414.035c-.738.063-1.597.195-2.058.313-.297.082-.688.28-.875.449-.324.289-.532.703-.625 1.254-.094.547-.098.879-.098 5.144v4.274h-5.39Zm0 0" />
-  </svg>
-);
-

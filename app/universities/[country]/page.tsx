@@ -52,28 +52,21 @@ export default function CountryUniversityPage({ params }: { params: Promise<{ co
 
       {/* Top Universities as Cards */}
       <section className="py-20 border-b border-foreground/10">
-        <div className="max-w-[1280px] mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <h3 className="text-3xl font-bold text-foreground mb-12">Top Universities</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {data.universities.map((uni, idx) => {
-              // Generate a unique image based on university index
-              const campusImages = [
-                'https://images.unsplash.com/photo-1427504494785-cdec9f9fab0b?w=500&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1445808661321-8ce185412b4f?w=500&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1577090071183-a4e7fa54b9a4?w=500&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1561758033-d89a0ad1d128?w=500&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1514595541221-12e1f00361e7?w=500&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1564981797696-8c2d265b20a3?w=500&h=400&fit=crop',
-              ];
-              const imgUrl = campusImages[idx % campusImages.length];
-              
               return (
-                <a key={idx} href="#" onClick={(e) => e.preventDefault()} className="group">
+                <a
+                  key={idx}
+                  href={uni.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
                   <div 
                     className="relative h-40 rounded-lg overflow-hidden bg-cover bg-center mb-3 cursor-pointer hover:shadow-lg transition-all"
-                    style={{ backgroundImage: `url('${imgUrl}')` }}
+                    style={{ backgroundImage: `url('${uni.image}')` }}
                   >
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all" />
                     <div className="absolute inset-0 flex flex-col justify-end p-4">

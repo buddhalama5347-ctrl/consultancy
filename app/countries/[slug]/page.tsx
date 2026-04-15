@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `Study in ${country.name} | EduPath`,
+    title: `Study in ${country.name} | Exact Education`,
     description: country.overview,
     openGraph: {
-      title: `Study in ${country.name} | EduPath`,
+      title: `Study in ${country.name} | Exact Education`,
       description: country.overview,
       images: [country.image],
     },

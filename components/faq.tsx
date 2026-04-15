@@ -3,13 +3,13 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 
-interface FAQItem {
+export interface FAQItem {
   id: string
   question: string
   answer: string
 }
 
-const faqItems: FAQItem[] = [
+const defaultFaqItems: FAQItem[] = [
   {
     id: 'faq-1',
     question: 'Which countries can I apply to?',
@@ -40,14 +40,27 @@ const faqItems: FAQItem[] = [
     question: 'Can you help me find scholarships?',
     answer: 'Yes, we guide you in exploring scholarship opportunities and help you prepare strong applications to improve your chances of receiving financial aid.',
   },
-];
+]
 
-function FAQAccordion() {
-  const [openId, setOpenId] = useState<string | null>('faq-1')
+interface FAQSectionProps {
+  title?: string
+  description?: string
+  items?: FAQItem[]
+  initialOpenId?: string | null
+}
+
+function FAQAccordion({
+  items,
+  initialOpenId,
+}: {
+  items: FAQItem[]
+  initialOpenId: string | null
+}) {
+  const [openId, setOpenId] = useState<string | null>(initialOpenId)
 
   return (
     <div className="w-full space-y-2">
-      {faqItems.map((item) => (
+      {items.map((item) => (
         <div
           key={item.id}
           className="border-b border-border transition-colors hover:bg-muted/30"
@@ -83,22 +96,30 @@ function FAQAccordion() {
   )
 }
 
-export default function FAQPage() {
+export default function FAQPage({
+  title = 'FAQ',
+  description = 'Find answers to common questions about our product and services.',
+  items = defaultFaqItems,
+  initialOpenId,
+}: FAQSectionProps) {
+  const firstItemId = items.length > 0 ? items[0].id : null
+  const defaultOpenId = initialOpenId === undefined ? firstItemId : initialOpenId
+
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
       <header className="border-b border-border">
         <div className="mx-auto container px-6 py-12">
-          <h1 className="text-4xl font-bold text-foreground">FAQ</h1>
+          <h1 className="text-4xl font-bold text-foreground">{title}</h1>
           <p className="mt-4 text-foreground/70">
-            Find answers to common questions about our product and services.
+            {description}
           </p>
         </div>
       </header>
 
       {/* FAQ Content */}
       <div className="mx-auto container md:px-6 py-12">
-        <FAQAccordion />
+        <FAQAccordion items={items} initialOpenId={defaultOpenId} />
       </div>
 
       {/* CTA Section */}

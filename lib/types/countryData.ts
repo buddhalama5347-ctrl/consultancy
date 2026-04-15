@@ -37,7 +37,7 @@ export interface CountryData {
     scholarships: string;
   };
 
-  universities: Array<{
+  universities?: Array<{
     name: string;
     ranking: string;
     specialization: string;

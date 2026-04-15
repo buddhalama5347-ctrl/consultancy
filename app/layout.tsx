@@ -4,6 +4,7 @@ import "./globals.css";
 import AOSProvider from "@/components/AOSProvider";
 import { Header } from "@/components/header-3";
 import Footer from "@/components/footer";
+import FloatingCounselling from "@/components/floating-counselling";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
         {children}
         </AOSProvider>
          < Footer />
+        <FloatingCounselling />
         </body>
     </html>
   );

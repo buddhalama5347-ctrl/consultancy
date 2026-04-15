@@ -1,29 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+
 import { interviewData } from '@/lib/interview-data';
 import { ArrowRight, BookOpen, Target, Users, Zap } from 'lucide-react';
-import {  CheckCircle, AlertCircle } from 'lucide-react';
+import {  CheckCircle } from 'lucide-react';
 
 export default function InterviewPreparationPage() {
   const countries = Object.entries(interviewData);
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Sticky Header */}
-      {/* <div className=" bg-white border-b border-foreground/5 bg-red-500 mt-30">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-6">
-          <div className="flex items-center gap-4">
-            <Link href="/">
-              <Button variant="ghost" size="sm" className="text-foreground/60 hover:text-foreground">
-                ← Backsadasdasdas
-              </Button>
-            </Link>
-            <h1 className="text-lg font-semibold text-foreground">Interview Preparation</h1>
-          </div>
-        </div>
-      </div> */}
+   
 
 
       {/* Hero Section */}

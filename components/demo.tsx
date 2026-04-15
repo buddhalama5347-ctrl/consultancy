@@ -6,59 +6,60 @@ import { motion } from "motion/react";
 const testimonials = [
   {
     text: "The entire process from university selection to visa approval was smooth and stress-free. Highly professional team.",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
-    name: "Briana Patton",
+    image: "/bipul.jpg",
+    name: "Bipul Gurung",
     role: "Student – Australia",
   },
   {
     text: "They guided me step by step and helped me secure admission in the UK. Everything was clearly explained.",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
-    name: "Bilal Ahmed",
+    image: "/sosal.jpg",
+    name: "Sosal Basnet",
     role: "Student – UK",
   },
   {
-    text: "Dami cha, ekdam helpful consultancy. Visa pani easily approve bhayo.",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
-    name: "Saman Malik",
+    text: "Ramro xha , visa pani easily approve bhayo. Ma ekdam satisfied chu uniharuko service sanga.",
+    image: "/dewasis.jpg",
+    name: "Dewasis Shrestha",
     role: "Student – Canada",
   },
+
   {
-    text: "I was confused about my future, but their counseling helped me choose the right path. Now I’m studying in the USA.",
+    text: "Australia jana ko process ali confusing thiyo, tara uniharu le ramrari guide gare. Aile ma padhdai chu.",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
-    name: "Omar Raza",
+    name: "Aayush Adhikari",
     role: "Student – USA",
   },
   {
-    text: "Very supportive team. They handled my documentation and visa process perfectly.",
+    text: "Very supportive team. Documentation dekhi visa samma sabai ma help gare. Highly recommended.",
     image: "https://randomuser.me/api/portraits/women/5.jpg",
-    name: "Zainab Hussain",
+    name: "Sita Thapa",
     role: "Student – Australia",
   },
   {
-    text: "From application to final visa, everything was managed smoothly. Great experience overall.",
+    text: "Application dekhi visa samma sab process smooth bhayo. Ma ekdam satisfied chu.",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
-    name: "Aliza Khan",
+    name: "Nisha Karki",
     role: "Student – Canada",
   },
   {
-    text: "They helped me shortlist universities based on my budget and profile. Highly recommended!",
+    text: "They helped me shortlist universities based on my budget and profile. Ekdam ramro experience thiyo.",
     image: "https://randomuser.me/api/portraits/men/7.jpg",
-    name: "Farhan Siddiqui",
+    name: "Rajan Shrestha",
     role: "Student – UK",
   },
   {
-    text: "The counselors were friendly and always available. I never felt lost during the process.",
+    text: "Counselors haru ekdam friendly thiyo. Sabai step ma support gare, I never felt confused.",
     image: "https://randomuser.me/api/portraits/women/8.jpg",
-    name: "Sana Sheikh",
+    name: "Pratima Rai",
     role: "Student – USA",
   },
   {
-    text: "Got my visa approved on the first attempt. Their preparation and guidance made a big difference.",
+    text: "First attempt mai visa approve bhayo. Proper guidance le ekdam help garyo.",
     image: "https://randomuser.me/api/portraits/men/9.jpg",
-    name: "Hassan Ali",
+    name: "Sanjay Bista",
     role: "Student – Australia",
   },
-];
+];;
 
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);

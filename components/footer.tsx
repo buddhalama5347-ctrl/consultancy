@@ -8,7 +8,7 @@
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="logo.png" alt="Company Logo" className="h-10" />
+               <img src="/logo2nobg.png" alt="Company Logo" className="h-20" />
               </div>
 
               <p className="text-white/70 text-sm">
@@ -129,7 +129,7 @@
           {/* Bottom Bar */}
           <div className="border-t border-white/20 pt-8 text-center text-white/70 text-sm">
             <p>
-              &copy; 2024 EduPath. All rights reserved. | Your trusted partner
+              &copy; 2024 Exact Education. All rights reserved. | Your trusted partner
               in global education
             </p>
           </div>

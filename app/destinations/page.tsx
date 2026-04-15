@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { useState, useMemo } from 'react';
 
 // export const metadata = {
-//   title: 'Study Destinations | EduPath',
+//   title: 'Study Destinations | Exact Education',
 //   description: 'Explore our study abroad destinations and find the perfect country for your education.',
 // };
 

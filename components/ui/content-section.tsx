@@ -73,7 +73,7 @@ export function ContentSectionVariant2({ image, title, reverse = false,number, c
         </div>
 
         {/* CTA Link */}
-        <button
+        {/* <button
           className={`group/btn inline-flex items-center gap-2 text-sm font-medium text-foreground transition-all duration-300 ${
             isHovered ? "gap-4" : "gap-2"
           }`}
@@ -87,7 +87,7 @@ export function ContentSectionVariant2({ image, title, reverse = false,number, c
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-        </button>
+        </button> */}
       </div>
     </div>
   )

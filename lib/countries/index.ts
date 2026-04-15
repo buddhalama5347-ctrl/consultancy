@@ -7,6 +7,16 @@ import { usaCountryData } from '@/lib/countries/usaCountryData';
 import { canadaCountryData } from '@/lib/countries/canadaCountryData';
 import { germanyCountryData } from '@/lib/countries/germanyCountryData';
 import type { CountryData } from '../types/countryData';
+import { southKoreaCountryData } from './southKoreaCountryData';
+import { netherlandsCountryData } from './netherlandCountryData';
+import { finlandCountryData } from './finlandCountryData';
+import { franceCountryData } from './franceCountryData';
+import { irelandCountryData } from './irelandCountryData';
+import { switzerlandCountryData } from './switzerlandCountryData';
+import { denmarkCountryData } from './denmarkCountryData';
+import { swedenCountryData } from './swedenCountryData';
+
+
 
 
 
@@ -19,6 +29,15 @@ export const countriesData = {
   'united-states': usaCountryData,
   'canada': canadaCountryData,
   'germany': germanyCountryData,
+  'south-korea': southKoreaCountryData,
+  'netherlands': netherlandsCountryData,
+    'finland': finlandCountryData,
+  'denmark': denmarkCountryData,
+  'sweden': swedenCountryData,
+  'france': franceCountryData,
+  'switzerland': switzerlandCountryData,
+  'ireland': irelandCountryData,
+
 };
 
 // Helper functions

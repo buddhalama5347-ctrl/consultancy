@@ -91,7 +91,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Story */}
+  {/* Our Story */}
         <section className="py-0  py-28  px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-20 items-center">
@@ -123,9 +123,104 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        
+        {/* Our Mission & Vision */}
+        <section className="py-28 px-6 bg-muted/20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-gold tracking-[0.3em] uppercase text-sm font-semibold mb-5">
+                Our Foundation
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+                Mission & Vision
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-16">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/50">
+                <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  To democratize access to world-class education by providing personalized,
+                  transparent, and comprehensive guidance to students seeking international
+                  higher education opportunities. We strive to bridge the gap between
+                  ambition and achievement, ensuring every student finds their perfect
+                  academic path abroad.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/50">
+                <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mb-6">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  To be the most trusted and innovative education consultancy, empowering
+                  students worldwide to pursue their dreams through education. We envision
+                  a future where geographical boundaries no longer limit educational
+                  opportunities, and every student can access the global education landscape
+                  with confidence and clarity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What Sets Us Apart */}
+        <section className="py-28 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-gold tracking-[0.3em] uppercase text-sm font-semibold mb-5">
+                Why Choose Us
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+                What Sets Us Apart
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Personalized Counseling</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  One-on-one sessions tailored to your unique profile, goals, and circumstances.
+                  No cookie-cutter advice – just genuine, student-centered guidance.
+                </p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <FileCheck className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">End-to-End Support</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  From application to acceptance, visa processing to pre-departure orientation –
+                  we're with you every step of the way, ensuring nothing falls through the cracks.
+                </p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Proven Track Record</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  With over 15,000 successful placements and partnerships with 50+ universities,
+                  our results speak for themselves. Your success is our greatest achievement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      
 
         {/* Our Values */}
-        <section className="py-28 px-6">
+        {/* <section className="py-28 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <p className="text-gold tracking-[0.3em] uppercase text-sm font-semibold mb-5">
@@ -159,7 +254,7 @@ export default function AboutPage() {
               })}
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );

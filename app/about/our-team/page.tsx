@@ -1,74 +1,92 @@
-import { Header } from "@/components/header-3";
-
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Aarav Sharma",
     role: "Director & Founder",
-    bio: "With over 15 years in international education consulting, John leads our team with vision and expertise.",
-    image: "/team/john.jpg"
+    image:
+      "/team1.jpg",
   },
   {
-    name: "Sarah Johnson",
-    role: "Senior Education Consultant",
-    bio: "Sarah specializes in US and UK university admissions, helping students achieve their academic dreams.",
-    image: "/team/sarah.jpg"
+    name: "Laxmi Gurung",
+    role: "Admin Officer",
+    image:
+        "/team2.jpg",
+    },
+  {
+    name: "Mina Pant",
+    role: "Education Counsellor",
+    image:
+      "/team3.jpg",
   },
   {
-    name: "Michael Chen",
-    role: "Visa & Immigration Specialist",
-    bio: "Michael ensures smooth visa processes for students heading to universities worldwide.",
-    image: "/team/michael.jpg"
+    name: "Suvekshya Phuyal",
+    role: "Admission Officer",
+    image:
+      "/team4.jpg",
   },
   {
-    name: "Emily Rodriguez",
-    role: "Student Success Manager",
-    bio: "Emily provides ongoing support to students throughout their international education journey.",
-    image: "/team/emily.jpg"
-  }
+    name: "Rohan Adhikari",
+    role: "Application Process Lead",
+    image:
+      "https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    name: "Anisha Bhandari",
+    role: "Scholarship Advisor",
+    image:
+      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    name: "Kabir Thapa",
+    role: "Exam Preparation Mentor",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    name: "Nisha Koirala",
+    role: "Student Relations Coordinator",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
+  },
 ];
 
 export default function OurTeamPage() {
   return (
-    <>
-      {/* <Header />
-      <main className="min-h-screen pt-16">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Our Team
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the dedicated professionals who make your international education dreams a reality.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
-                <p className="text-primary font-semibold mb-4">{member.role}</p>
-                <p className="text-muted-foreground text-sm">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-20 bg-gradient-to-r from-primary/5 to-primary/10 rounded-lg p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Team</h2>
-            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              We're always looking for talented individuals passionate about international education to join our growing team.
-            </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-              View Career Opportunities
-            </button>
-          </div>
+    <main className="min-h-screen bg-[#f7f7f8] pt-32 pb-20 px-6">
+      <section className="max-w-7xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto mb-14">
+          <h1 className="text-4xl md:text-6xl font-semibold text-foreground leading-tight">
+            We bring a wealth of skills and experience from a wide range of
+            backgrounds.
+          </h1>
+          <p className="mt-5 text-base md:text-lg text-muted-foreground">
+            Our philosophy is simple: hire great people and give them the
+            resources and support to do their best work.
+          </p>
         </div>
-      </main> */}
-      <h1 className="font-lg bg-red-500 mt-20 h-[50vh]">later</h1>
-    </>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {teamMembers.map((member) => (
+            <article
+              key={member.name}
+              className="group bg-white border border-[#ececef] shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              <div className="relative overflow-hidden aspect-[3/3.4] bg-[#f0f1f3]">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="px-4 py-4 border-t border-[#ececef] bg-white">
+                <h2 className="text-lg font-semibold text-foreground leading-tight">
+                  {member.name}
+                </h2>
+                <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

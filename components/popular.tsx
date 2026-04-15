@@ -13,14 +13,14 @@ const floatingServices = [
   },
   {
     id: 2,
-    title: "IELTS Practice",
+    title: "IELTS/PTE Practice",
     icon: BookOpen,
     angle: 90,
     color: "from-blue-400 to-blue-500",
   },
   {
     id: 3,
-    title: "Test Preparation",
+    title: "Interview Preparation",
     icon: FileCheck,
     angle: 180,
     color: "from-gray-400 to-gray-500",
@@ -71,7 +71,7 @@ export default function FloatingServices() {
               Our Expertise
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-8 leading-tight">
-              EduPath: Your Global Education Partner
+              Exact Education: Your Global Education Partner
             </h2>
             <p className="text-lg text-foreground/70 leading-relaxed mb-8">
               We look ahead with an expanded vision to be students lifelong

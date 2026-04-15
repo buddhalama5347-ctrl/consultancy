@@ -5,36 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Globe, Award, Users, BookOpen } from 'lucide-react';
 
 export default function UniversitiesPage() {
-  const countries = [
-    { 
-      name: 'United States',
-      slug: 'united-states',
-      bg: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&h=400&fit=crop',
-      universities: '4,500+',
-      highlight: 'Ivy League & Top Ranked'
-    },
-    {
-      name: 'United Kingdom',
-      slug: 'united-kingdom',
-      bg: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop',
-      universities: '200+',
-      highlight: 'Oxford & Cambridge'
-    },
-    {
-      name: 'Australia',
-      slug: 'australia',
-      bg: 'https://images.unsplash.com/photo-1523482580672-f67fbdf45479?w=600&h=400&fit=crop',
-      universities: '43',
-      highlight: 'Go8 Group Universities'
-    },
-    {
-      name: 'Japan',
-      slug: 'japan',
-      bg: 'https://images.unsplash.com/photo-1540959375944-7049f642e9b0?w=600&h=400&fit=crop',
-      universities: '780+',
-      highlight: 'Affordable & World-Class'
-    },
-  ];
+ 
 
   return (
     <main className="min-h-screen bg-white">
@@ -63,10 +34,14 @@ export default function UniversitiesPage() {
           <h3 className="text-3xl font-bold text-foreground mb-12">Choose Your Study Destination</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { name: 'United States', slug: 'united-states', flag: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=500&h=300&fit=crop' },
-              { name: 'United Kingdom', slug: 'united-kingdom', flag: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&h=300&fit=crop' },
-              { name: 'Australia', slug: 'australia', flag: 'https://images.unsplash.com/photo-1523482580672-f67fbdf45479?w=500&h=300&fit=crop' },
-              { name: 'Japan', slug: 'japan', flag: 'https://images.unsplash.com/photo-1540959375944-7049f642e9b0?w=500&h=300&fit=crop' },
+              { name: 'United States', slug: 'united-states', flag: 'https://plus.unsplash.com/premium_photo-1674591172747-2c1d461d7b68?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+              { name: 'United Kingdom', slug: 'united-kingdom', flag: 'https://plus.unsplash.com/premium_photo-1675865395876-1cf435b64e78?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+              { name: 'Australia', slug: 'australia', flag: 'https://images.unsplash.com/photo-1680173764109-bfe1a34a1877?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+              { name: 'Japan', slug: 'japan', flag: 'https://plus.unsplash.com/premium_photo-1675865394925-8ccfb93e2dc8?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+                          { name: 'Europe', slug: 'europe', flag: 'https://images.unsplash.com/photo-1675855508248-83b25370ff61?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+              { name: 'New Zealand', slug: 'new-zealand', flag: 'https://plus.unsplash.com/premium_photo-1675875487669-620e25fe92a3?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+                          { name: 'Canada', slug: 'canada', flag: 'https://plus.unsplash.com/premium_photo-1674591172352-0af9308f0dac?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+              { name: 'Ireland', slug: 'ireland', flag: 'https://plus.unsplash.com/premium_photo-1675865394105-f4b090661646?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aXJlbGFuZCUyMGZsYWd8ZW58MHx8MHx8fDA%3D' },
               
             ].map((country) => (
               <Link key={country.slug} href={`/universities/${country.slug}`}>
