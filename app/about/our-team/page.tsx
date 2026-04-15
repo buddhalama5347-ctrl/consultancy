@@ -3,25 +3,25 @@ const teamMembers = [
     name: "Aarav Sharma",
     role: "Director & Founder",
     image:
-      "/team1.jpg",
+      "/team1.JPG",
   },
   {
     name: "Laxmi Gurung",
     role: "Admin Officer",
     image:
-        "/team2.jpg",
+        "/team2.JPG",
     },
   {
     name: "Mina Pant",
     role: "Education Counsellor",
     image:
-      "/team3.jpg",
+      "/team3.JPG",
   },
   {
     name: "Suvekshya Phuyal",
     role: "Admission Officer",
     image:
-      "/team4.jpg",
+      "/team4.JPG",
   },
   {
     name: "Rohan Adhikari",
