@@ -1,5 +1,13 @@
 import { GraduationCap, CheckCircle, Users, Zap } from "lucide-react";
 import Link from "next/link";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'University Counseling',
+  description:
+    'Find the right university with Exact Education: profile assessment, university matching, application strategy, and document support.',
+  path: '/services/university-counseling',
+});
 
 export default function UniversityCounselingPage() {
   const services = [

@@ -18,9 +18,9 @@ export function CountryHero({ country }: { country: CountryData }) {
         }}
       >
         {/* Back button */}
-        <Link href="/#destinations" className="absolute top-6 left-6">
-          <button className="text-white/80 hover:text-white transition-colors">
-            <ArrowLeft className="w-5 h-5" />
+        <Link href="/#destinations" className="absolute top-6 left-6 cursor-pointer">
+          <button className="text-white/80 hover:text-white transition-colors cursor-pointer ">
+            <ArrowLeft className="w-5 h-5 cursor-pointer" />
           </button>
         </Link>
 

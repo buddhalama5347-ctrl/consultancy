@@ -13,6 +13,14 @@ import { Destinations } from "@/components/destination";
 import {  MapPin, } from "lucide-react";
 import { Contact } from "@/components/contact";
 import { ContentSectionVariant1 } from "@/components/ui/content-section2";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'Study Abroad Consultancy',
+  description:
+    'Exact Education helps international students from Nepal choose the right university and apply with end-to-end support for study visas.',
+  path: '/',
+});
 
 
 

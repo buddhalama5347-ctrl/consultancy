@@ -180,7 +180,7 @@ const handleMouseEnter = (label: string) => {
 
           <div className="hidden md:block">
             <Link href="/online-application">
-              <Button>Online Application</Button>
+              <Button className='cursor-pointer'>Online Application</Button>
             </Link>
           </div>
 

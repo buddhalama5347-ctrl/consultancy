@@ -2,6 +2,14 @@ import { BookOpen, Clock, Award, Users, CheckCircle, ChevronRight, Star, Target,
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import FAQPage from "@/components/faq";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'IELTS Preparation',
+  description:
+    'Prepare for IELTS with Exact Education: expert coaching, strategies for each module, and IELTS FAQs for students preparing for study abroad.',
+  path: '/ielts',
+});
 
 
 const bandScores = [

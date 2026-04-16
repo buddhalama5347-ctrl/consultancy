@@ -1,7 +1,7 @@
 'use client';
 
 import { CountryData } from '@/lib/countries';
-import { Check } from 'lucide-react';
+
 
 export function CountryVisa({ country }: { country: CountryData }) {
   return (

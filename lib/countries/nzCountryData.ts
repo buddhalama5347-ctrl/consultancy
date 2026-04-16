@@ -100,6 +100,22 @@ export const nzCountryData: CountryData = {
       question: 'Is New Zealand safe for international students?',
       answer: 'Yes, New Zealand is one of the safest countries in the world with low crime rates and welcoming communities.',
     },
+    {
+      question: 'Can I work while studying in NZ?',
+      answer: 'Yes, you can work up to 20 hours per week during study and full-time during holidays.',
+    },
+    {
+      question: 'Can I get PR after studying?',
+      answer: 'Yes, this is possible through post-study work visa options and skilled migration pathways.',
+    },
+    {
+      question: 'Is interview required for NZ visa?',
+      answer: 'Sometimes. It depends on your profile and the supporting documents in your application.',
+    },
+    {
+      question: 'Is accommodation expensive in NZ?',
+      answer: 'Yes, it is moderately high and usually around NZD 150-300 per week depending on city and accommodation type.',
+    },
   ],
 
   countryHighlights: [
@@ -127,22 +143,22 @@ export const nzCountryData: CountryData = {
 
   intakes: [
     {
-      name: 'February (Semester 1)',
-      period: 'Feb - Jun',
-      months: 'February - June',
+      name: 'February Intake',
+      period: 'Feb',
+      months: 'February',
       type: 'Main intake',
     },
     {
-      name: 'July (Semester 2)',
-      period: 'Jul - Nov',
-      months: 'July - November',
-      type: 'Major intake',
+      name: 'July Intake',
+      period: 'Jul',
+      months: 'July',
+      type: 'Mid intake',
     },
     {
-      name: 'November (Trimester)',
-      period: 'Nov - Feb',
-      months: 'November - February',
-      type: 'Minor intake',
+      name: 'October-November Intake',
+      period: 'Oct - Nov',
+      months: 'October - November',
+      type: 'Limited options',
     },
   ],
 
@@ -202,12 +218,10 @@ export const nzCountryData: CountryData = {
   totalEstimate: 'NZD 30,000 - NZD 55,000 per year',
 
   requirements: [
-    'High school diploma or equivalent',
-    'Academic transcripts',
-    'English language proficiency (IELTS/TOEFL)',
-    'Medical certificate',
-    'Character certificate',
-    'Health insurance',
+    'Academics',
+    'English proficiency (IELTS/PTE/TOEFL/CAE)',
+    'Health and character documents, including police clearance certificate',
+    'Equivalency certificate (if holding an overseas degree)',
   ],
 
   documentChecklist: [

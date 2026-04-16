@@ -150,7 +150,7 @@ export default function DestinationsPage() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-300"
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-300 cursor-pointer"
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>

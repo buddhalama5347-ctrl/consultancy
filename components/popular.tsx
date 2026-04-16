@@ -130,10 +130,10 @@ export default function FloatingServices() {
                 </p>
               </div>
             </div>
-            <button className="text-primary font-semibold text-lg hover:text-secondary transition-colors flex items-center gap-2 mt-10">
+            {/* <button className="text-primary font-semibold text-lg hover:text-secondary transition-colors flex items-center gap-2 mt-10">
               LEARN MORE
               <span className="text-xl">›</span>
-            </button>
+            </button> */}
           </div>
 
           {/* Right - Circular Image with Floating Cards */}
@@ -172,7 +172,7 @@ export default function FloatingServices() {
                   }}
                 >
                   <div
-                    className={`  bg-white rounded-lg shadow-lg p-4 flex items-center gap-3 hover:shadow-xl transition-all duration-300 cursor-pointer group ${isActive ? "scale-110 shadow-2xl" : "hover:scale-105"
+                    className={`  bg-white rounded-lg shadow-lg p-4 flex items-center gap-3 hover:shadow-xl transition-all duration-300  group ${isActive ? "scale-110 shadow-2xl" : "hover:scale-105"
                       }`}
                     onClick={() => setActiveIndex(index)}
                   >

@@ -13,6 +13,7 @@ import {
   BookOpen,
   DollarSign,
 } from "lucide-react";
+import { seoMetadata } from '@/lib/seo';
 
 const stats = [
   { number: "15,000+", label: "Students Placed", icon: GraduationCap },
@@ -51,6 +52,13 @@ const services = [
     bg: "bg-orange-500",
   },
 ];
+
+export const metadata = seoMetadata({
+  pageTitle: 'About Us',
+  description:
+    'Learn about Exact Education, a study abroad consultancy supporting students with university selection, visa assistance, and interview preparation.',
+  path: '/about',
+});
 
 export default function AboutPage() {
   return (

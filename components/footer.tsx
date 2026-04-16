@@ -22,7 +22,7 @@
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#home"
+                    href="/"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Home
@@ -30,15 +30,23 @@
                 </li>
                 <li>
                   <a
-                    href="#services"
+                    href="/universities"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
-                    Services
+                    Universities
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#destinations"
+                    href="/interview-preparation"
+                    className="text-white/70 hover:text-white transition-colors text-sm"
+                  >
+                    Interview Preparation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/destinations"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Destinations
@@ -46,7 +54,7 @@
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Contact
@@ -57,38 +65,22 @@
 
             {/* Services */}
             <div>
-              <h4 className="font-bold mb-4">Services</h4>
+              <h4 className="font-bold mb-4">English Test</h4>
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="/ielts"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
-                    University Selection
+                    IELTS
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/pte"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
-                    Visa Assistance
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-white/70 hover:text-white transition-colors text-sm"
-                  >
-                    Scholarships
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-white/70 hover:text-white transition-colors text-sm"
-                  >
-                    Career Support
+                    PTE
                   </a>
                 </li>
               </ul>
@@ -100,7 +92,7 @@
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="/privacy-policy"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Privacy Policy
@@ -108,7 +100,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/terms-of-service"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Terms of Service
@@ -116,7 +108,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/disclaimer"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Disclaimer

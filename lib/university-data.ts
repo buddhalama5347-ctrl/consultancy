@@ -22,6 +22,12 @@ export const universityData = {
         location: 'Palo Alto, California',
         image: 'https://images.unsplash.com/photo-1582233479366-6d38bc390a08?w=400',
         link: 'https://www.stanford.edu'
+      },
+      {
+        name: 'Stanford University',
+        location: 'Palo Alto, California',
+        image: 'https://images.unsplash.com/photo-1582233479366-6d38bc390a08?w=400',
+        link: 'https://www.stanford.edu'
       }
     ]
   },

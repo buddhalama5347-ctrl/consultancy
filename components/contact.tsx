@@ -234,8 +234,8 @@ export function Contact() {
                 <h4 className="font-bold text-foreground mb-4">Follow Us</h4>
                 <div className="flex gap-4">
                   <a
-                    href="#"
-                    className="p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors"
+                    href="https://www.facebook.com/share/1DiDy8wSFi/?mibextid=wwXIfr"
+                    className="p-3  bg-blue-500/10 hover:bg-primary/20 rounded-lg transition-colors"
                     aria-label="Facebook"
                   >
                     <img src = "facebook.png" className="w-5 h-5 text-primary" />
@@ -244,8 +244,8 @@ export function Contact() {
                   </a>
                  
                   <a
-                    href="#"
-                    className="p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors"
+                    href="instagram.com/kba_global_chabahil?igsh=YjZxbXZhOWRvbmJr&utm_source=qr"
+                    className="p-3  bg-blue-500/10 hover:bg-primary/20 rounded-lg transition-colors"
                     aria-label="Instagram"
                   >
                     <img src = "insta.png" className="w-5 h-5 text-primary" />

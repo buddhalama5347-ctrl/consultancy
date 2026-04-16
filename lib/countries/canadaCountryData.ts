@@ -6,7 +6,7 @@ export const canadaCountryData: CountryData = {
   slug: 'canada',
   image: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   description: 'Affordable quality education in a multicultural society',
-  overview: 'Canada offers excellent education at affordable costs with a high quality of life. With over 100 universities and colleges, Canada provides diverse programs and post-graduation work opportunities.',
+  overview: 'Canada offers high-quality, globally recognized education with a strong focus on practical skills and career development. It is a safe, welcoming, and multicultural country that provides excellent opportunities for international students.',
   highlights: ['Toronto', 'Vancouver', 'University of Toronto', 'McGill', 'UBC'],
   universityCount: 100,
   color: 'from-red-600 to-white',
@@ -120,6 +120,26 @@ export const canadaCountryData: CountryData = {
       question: 'Can I work while studying in Canada?',
       answer: 'Yes, students can work on-campus and off-campus with restrictions. Post-graduation work permits allow full-time work.',
     },
+    {
+      question: 'What is a Study Permit?',
+      answer: 'It is the official document that allows international students to study in Canada.',
+    },
+    {
+      question: 'Is accommodation expensive in Canada?',
+      answer: 'It depends on the city, but average cost ranges from CAD 400-1000 per month.',
+    },
+    {
+      question: 'Can I get PR after studying in Canada?',
+      answer: 'Yes, Canada offers pathways to Permanent Residency through post-study work and immigration programs.',
+    },
+    {
+      question: 'Is medical required for Canada visa?',
+      answer: 'Yes, a medical exam from an approved panel doctor is required in most cases.',
+    },
+    {
+      question: 'How long does visa processing take?',
+      answer: 'Processing time varies but usually takes a few weeks to several months depending on the application type.',
+    },
   ],
 
   countryHighlights: [
@@ -147,22 +167,22 @@ export const canadaCountryData: CountryData = {
 
   intakes: [
     {
-      name: 'Fall Intake',
-      period: 'Sep - Dec',
-      months: 'September - December',
-      type: 'Main intake',
+      name: 'September Intake',
+      period: 'Sep',
+      months: 'September',
+      type: 'Fall - Main intake',
     },
     {
-      name: 'Winter Intake',
-      period: 'Jan - Apr',
-      months: 'January - April',
-      type: 'Major intake',
+      name: 'January Intake',
+      period: 'Jan',
+      months: 'January',
+      type: 'Winter - Secondary intake',
     },
     {
-      name: 'Spring/Summer',
-      period: 'May - Aug',
-      months: 'May - August',
-      type: 'Minor intake',
+      name: 'May Intake',
+      period: 'May',
+      months: 'May',
+      type: 'Summer - Limited intake',
     },
   ],
 
@@ -227,12 +247,12 @@ export const canadaCountryData: CountryData = {
   totalEstimate: 'CAD 23,000 - CAD 42,000 per year',
 
   requirements: [
-    'High school diploma or equivalent',
-    'Academic transcripts',
-    'Language proficiency (IELTS/TOEFL or French tests)',
-    'Financial proof',
-    'Medical certificate',
-    'Police clearance certificate',
+    'Personal documents',
+    'Academics',
+    'Financial documents',
+    'Medical and police documents',
+    'Language proficiency',
+    'Equivalency certificate (if holding an overseas degree)',
   ],
 
   documentChecklist: [

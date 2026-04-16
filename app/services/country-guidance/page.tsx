@@ -1,5 +1,13 @@
 import { Globe, CheckCircle, MapPin } from "lucide-react";
 import Link from "next/link";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'Country Guidance',
+  description:
+    'Get expert country guidance for study abroad: academics, finance, lifestyle, career, and pre-departure support from Exact Education.',
+  path: '/services/country-guidance',
+});
 
 export default function CountryGuidancePage() {
   const services = [

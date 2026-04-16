@@ -71,7 +71,7 @@ function FAQAccordion({
             aria-expanded={openId === item.id}
             aria-controls={`${item.id}-content`}
           >
-            <span className="flex-1 text-lg font-medium text-foreground">
+            <span className="flex-1 text-lg font-medium text-foreground cursor-pointer">
               {item.question}
             </span>
             <ChevronDown

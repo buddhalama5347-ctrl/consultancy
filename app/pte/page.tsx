@@ -17,6 +17,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 import FAQPage from "@/components/faq";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'PTE Preparation',
+  description:
+    'Prepare for PTE Academic with Exact Education: AI-scored practice, module strategies, and PTE FAQs for study abroad.',
+  path: '/pte',
+});
 
 const testModules = [
   {

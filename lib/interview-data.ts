@@ -382,11 +382,11 @@ export const interviewData: Record<InterviewCountry, InterviewGuide> = {
     country: 'Australia',
     slug: 'australia',
     backgroundImage: 'https://images.unsplash.com/photo-1663643632701-93bdd8c02f41?q=80&w=393&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    overview: 'Australian university interviews are less formal than UK but more structured than US. They assess your fit for the program, communication skills, and practical understanding of your field. The tone is friendly but professional.',
+    overview: 'For Australia student visas, there is usually no regular embassy interview. Most applicants are assessed through documents, though authorities may request a Genuine Student (GS) assessment and, in some cases, a follow-up phone interview.',
     interviewFormat: {
-      type: 'Program-Focused & Conversational',
-      duration: '20-45 minutes',
-      description: 'Usually with program coordinators or staff. They\'re friendly but want to understand your preparation, motivation, and readiness for the program.',
+      type: 'Usually No Regular Interview',
+      duration: 'Not routinely required (if requested, often a short call)',
+      description: 'Most Australia applications do not involve a standard embassy interview. However, applicants may be asked to provide a Genuine Student (GS) assessment, and sometimes a phone interview is conducted if further clarification is needed.',
     },
     prepSteps: [
       {

@@ -1,5 +1,13 @@
 import { Plane, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'Visa Assistance',
+  description:
+    'Get complete visa support from Exact Education: documentation, application filing, medical coordination, and interview preparation.',
+  path: '/services/visa-assistance',
+});
 
 export default function VisaAssistancePage() {
   const services = [

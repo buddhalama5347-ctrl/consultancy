@@ -10,6 +10,14 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'Services',
+  description:
+    'Exact Education provides university counseling, visa assistance, document verification, interview coaching, and destination guidance for study abroad students.',
+  path: '/services',
+});
 
 const mainServices = [
   {

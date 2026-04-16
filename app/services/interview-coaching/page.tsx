@@ -1,5 +1,13 @@
 import { BookOpen, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'Interview Coaching',
+  description:
+    'Ace university and visa interviews with Exact Education interview coaching: profile-based training, mock interviews, and communication skills.',
+  path: '/services/interview-coaching',
+});
 
 export default function InterviewCoachingPage() {
   const services = [

@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
 interface CountryRequirementsProps {
   requirements: string[];
 }
 
-export function CountryRequirements({ requirements }: CountryRequirementsProps) {
+export function CountryRequirements({
+  requirements,
+}: CountryRequirementsProps) {
   return (
     <section className="py-20 bg-white relative">
-      
-       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
 
       <div className="max-w-7xl  sm:px-8 lg:px-12 mx-auto">
         {/* Header */}

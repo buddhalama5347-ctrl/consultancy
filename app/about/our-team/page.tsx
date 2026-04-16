@@ -1,3 +1,12 @@
+import { seoMetadata } from '@/lib/seo';
+
+export const metadata = seoMetadata({
+  pageTitle: 'Our Team',
+  description:
+    'Meet the professionals at Exact Education who guide students with university selection, visa assistance, and interview preparation.',
+  path: '/about/our-team',
+});
+
 const teamMembers = [
   {
     name: "Aarav Sharma",

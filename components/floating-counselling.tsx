@@ -123,7 +123,7 @@ export default function FloatingCounselling() {
         style={{ backgroundColor: "#194A83" }}
       >
         <MapPin className="h-4 w-4 fill-white" />
-        <span className="text-base font-semibold">Get Free Counselling</span>
+        <span className="text-base font-semibold cursor-pointer">Get Free Counselling</span>
       </button>
 
       {isOpen && (
