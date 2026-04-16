@@ -1,3 +1,5 @@
+import Link from "next/link";
+
   {/* Footer */}
 
   export default function Footer() {
@@ -21,28 +23,28 @@
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <a
+                  <Link
                     href="/"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/universities"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Universities
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/interview-preparation"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Interview Preparation
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -53,12 +55,12 @@
                   </a>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/#contact"
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
