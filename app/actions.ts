@@ -98,7 +98,7 @@ export async function sendApplicationEmail(formData: {
 
     // Send email to your Gmail
     const result = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'Exact Education <contact@exactedunep.com>',
       to: 'Chabahil@exactedunp.com',
       replyTo: formData.email,
       subject: `New Online Application from ${formData.fullname}`,
