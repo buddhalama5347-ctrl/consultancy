@@ -14,6 +14,8 @@ export default function CountryUniversityPage({
 }) {
   const { country } = use(params);
   const data = universityData[country as keyof typeof universityData];
+    // const LOGO_DEV_PUBLIC_KEY =
+    //            ;
 
   if (!data) {
     return (
@@ -65,10 +67,9 @@ export default function CountryUniversityPage({
             {data.universities.map((uni, idx) => {
               const domain = new URL(uni.link).hostname;
 
-              const LOGO_DEV_PUBLIC_KEY =
-                process.env.NEXT_PUBLIC_LOGO_DEV_KEY;
+            
                
-              const logo = `https://img.logo.dev/${domain}?token=${LOGO_DEV_PUBLIC_KEY}`;
+           const logo = `https://img.logo.dev/${domain}?token=${process.env.NEXT_PUBLIC_LOGO_DEV_KEY}`;
 
               return (
                 <a
@@ -78,7 +79,7 @@ export default function CountryUniversityPage({
                   rel="noopener noreferrer"
                   className="group"
                 >
-                  <div className="text-center bg-white rounded-xl shadow-md p-6 w-52 text-center">
+                  <div className="text-center bg-white rounded-xl shadow-md p-6 w-full text-center">
 
                 
                   <Image
