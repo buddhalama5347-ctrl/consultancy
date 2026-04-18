@@ -69,7 +69,7 @@ export default function CountryUniversityPage({
 
             
                
-           const logo = `https://img.logo.dev/${domain}?token=${process.env.NEXT_LOGO_DEV}`;
+           const logo = `https://img.logo.dev/${domain}?token=${process.env.NEXT_PUBLIC_LOGO_DEV_KEY}`;
 
               return (
                 <a
