@@ -38,6 +38,7 @@ export default function UniversitiesPage() {
                 slug: "united-states",
                 flag: "https://plus.unsplash.com/premium_photo-1674591172747-2c1d461d7b68?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
+              
               {
                 name: "United Kingdom",
                 slug: "united-kingdom",
@@ -67,6 +68,42 @@ export default function UniversitiesPage() {
                 name: "Japan",
                 slug: "japan",
                 flag: "https://plus.unsplash.com/premium_photo-1675865394925-8ccfb93e2dc8?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+               {
+                name: "Korea",
+                slug: "korea",
+                flag: "https://plus.unsplash.com/premium_photo-1675865395547-87bc689a257a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a29yZWElMjBmbGFnfGVufDB8fDB8fHww",
+              },
+               {
+                name: "Germany",
+                slug: "germany",
+                flag: "https://plus.unsplash.com/premium_photo-1674590091046-18f2ad87f344?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+              {
+                name: "France",
+                slug: "france",
+                flag: "https://plus.unsplash.com/premium_photo-1674588218663-a0655e1be7db?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+               {
+                name: "Hungary",
+                slug: "hungary",
+                flag: "https://images.unsplash.com/photo-1675855549259-f742a935267b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+               {
+                name: "Spain",
+                slug: "spain",
+                flag: "https://plus.unsplash.com/premium_photo-1674588218567-120937a97b7e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+                {
+                name: "Netherland",
+                slug: "netherland",
+                flag: "https://plus.unsplash.com/premium_photo-1675875487404-41f1f38fcc5f?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              },
+              
+                {
+                name: "Malta",
+                slug: "malta",
+                flag: "https://plus.unsplash.com/premium_photo-1670689707981-8cf095287c46?q=80&w=1015&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
             ].map((country) => (
               <Link key={country.slug} href={`/universities/${country.slug}`}>
