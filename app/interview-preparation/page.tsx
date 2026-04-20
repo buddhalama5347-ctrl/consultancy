@@ -250,9 +250,10 @@ export default function InterviewPreparationPage() {
                 Can&apos;t find the answer you&apos;re looking for? Our support
                 team is here to help.
               </p>
-              <button className="mt-6 rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-opacity hover:opacity-90">
+              <Link href="/contact" className="mt-6 inline-block rounded-lg bg-white px-8 py-3 font-medium text-primary transition-opacity hover:opacity-90">Contact Us</Link>
+              {/* <button className="mt-6 rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-opacity hover:opacity-90 cursor-pointer">
                 Contact Support
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import FAQPage from "@/components/faq";
 import { seoMetadata } from '@/lib/seo';
+import Link from "next/link";
 
 export const metadata = seoMetadata({
   pageTitle: 'IELTS Preparation',
@@ -325,9 +326,12 @@ const IELTS= () => {
           >
                         Join thousands of successful students. Start your IELTS preparation with Exact Education today and achieve your dream band score.
           </p>
-           <Button size="lg"  className="gap-2 max-w-xs mt-6 bg-primary" >
+          <Link href = "/contact">
+       
+           <Button size="lg"  className="gap-2 max-w-xs mt-6 bg-primary cursor-pointer" >
               Start Your Journey <ChevronRight className="w-4 h-4" />
             </Button>
+               </Link>
         </div>
       </div>
 

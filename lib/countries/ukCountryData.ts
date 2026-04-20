@@ -4,7 +4,7 @@ export const ukCountryData: CountryData = {
   id: 'united-kingdom',
   name: 'United Kingdom',
   slug: 'united-kingdom',
-  image: 'https://images.unsplash.com/photo-1535182519407-c6a3b6ba90b5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image: 'https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   description: 'Home to prestigious universities and world-class education',
   overview: 'The United Kingdom is a global leader in higher education with prestigious universities like Oxford and Cambridge. UK universities offer rigorous academics, excellent research opportunities, and a vibrant student life.',
   highlights: ['Oxford', 'Cambridge', 'LSE', 'Imperial', 'UCL'],

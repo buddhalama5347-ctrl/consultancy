@@ -123,7 +123,7 @@ import Link from "next/link";
           {/* Bottom Bar */}
           <div className="border-t border-white/20 pt-8 text-center text-white/70 text-sm">
             <p>
-              &copy; 2024 Exact Education. All rights reserved. | Your trusted partner
+              &copy; 2026 Exact Education. All rights reserved. | Your trusted partner
               in global education
             </p>
           </div>

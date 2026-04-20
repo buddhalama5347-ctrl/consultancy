@@ -1,4 +1,5 @@
 import { seoMetadata } from "@/lib/seo";
+import Link from "next/link";
 
 export const metadata = seoMetadata({
   pageTitle: "Disclaimer",
@@ -18,20 +19,20 @@ export default function DisclaimerPage() {
           may be updated from time to time.
         </p>
 
-        <h2 className="text-xl font-semibold text-slate-900 mb-2">
+        {/* <h2 className="text-xl font-semibold text-slate-900 mb-2">
           No guaranteed outcomes
         </h2>
         <p className="text-slate-700 mb-4">
           Study abroad admissions, scholarship decisions, and visa approvals are
           subject to the relevant authorities. We cannot guarantee outcomes.
-        </p>
+        </p> */}
 
         <h2 className="text-xl font-semibold text-slate-900 mb-2">
           Contact us
         </h2>
         <p className="text-slate-700">
           For guidance specific to your profile, please contact us using the
-          form on our website.
+          form on our website. <Link href = "/contact" className="text-blue-600 underline">Get in touch</Link>.
         </p>
       </div>
     </main>

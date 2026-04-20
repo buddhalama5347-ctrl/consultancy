@@ -9,8 +9,8 @@ export const metadata = seoMetadata({
 
 const teamMembers = [
   {
-    name: "Aarav Sharma",
-    role: "Director & Founder",
+    name: "Lok Narayan Raj Bhandari",
+    role: "Marketing Manager",
     image:
       "/team1.JPG",
   },
@@ -32,30 +32,7 @@ const teamMembers = [
     image:
       "/team4.JPG",
   },
-  {
-    name: "Rohan Adhikari",
-    role: "Application Process Lead",
-    image:
-      "https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    name: "Anisha Bhandari",
-    role: "Scholarship Advisor",
-    image:
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    name: "Kabir Thapa",
-    role: "Exam Preparation Mentor",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    name: "Nisha Koirala",
-    role: "Student Relations Coordinator",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
-  },
+ 
 ];
 
 export default function OurTeamPage() {

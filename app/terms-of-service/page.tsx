@@ -15,10 +15,10 @@ export default function TermsOfServicePage() {
           Terms of Service
         </h1>
 
-        <p className="text-slate-700 mb-4">
+        {/* <p className="text-slate-700 mb-4">
           These are general terms that apply to your use of this website and
           any requests you submit to Exact Education.
-        </p>
+        </p> */}
 
         <h2 className="text-xl font-semibold text-slate-900 mb-2">
           Website use

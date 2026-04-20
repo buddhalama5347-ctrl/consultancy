@@ -84,7 +84,7 @@ export function Contact() {
             <div className="lg:col-span-2 animate-slideInLeft">
               <div className="bg-muted/30 border border-border rounded-lg p-10  [@media(max-width:500px)]:bg-white [@media(max-width:500px)]:border-0 [@media(max-width:500px)]:p-0">
                 <h3 className="text-2xl font-bold text-foreground mb-8">
-                  Send us a message
+                  Send us a Message
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-4">

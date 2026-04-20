@@ -15,10 +15,10 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
 
-        <p className="text-slate-700 mb-4">
+        {/* <p className="text-slate-700 mb-4">
           This is a general overview of how Exact Education handles information
           you provide when using our website or contacting us through forms.
-        </p>
+        </p> */}
 
         <h2 className="text-xl font-semibold text-slate-900 mb-2">
           Information we collect

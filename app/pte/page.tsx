@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 
 import FAQPage from "@/components/faq";
 import { seoMetadata } from '@/lib/seo';
+import Link from "next/link";
 
 export const metadata = seoMetadata({
   pageTitle: 'PTE Preparation',
@@ -500,9 +501,12 @@ const PTE = () => {
             Join our PTE preparation programme and get the score you need for
             your dream university or visa application.
           </p>
-          <Button size="lg"  className="gap-2 max-w-xs mt-6 bg-primary" >
-            Start Your Journey <ChevronRight className="w-4 h-4" />
-          </Button>
+          <Link href = "/contact">
+       
+           <Button size="lg"  className="gap-2 max-w-xs mt-6 bg-primary cursor-pointer" >
+              Start Your Journey <ChevronRight className="w-4 h-4" />
+            </Button>
+               </Link>
         </div>
       </div>
     </div>
