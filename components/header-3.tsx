@@ -110,12 +110,12 @@ const handleMouseEnter = (label: string) => {
                 {link.href ? (
                   <Link
                     href={link.href}
-                    className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-accent transition-colors flex items-center gap-1"
+                    className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors flex items-center gap-1"
                   >
                     {link.label}
                   </Link>
                 ) : (
-                  <button className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-accent transition-colors flex items-center gap-1">
+                  <button className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors flex items-center gap-1">
                     {link.label}
                     {link.subLinks && (
                       <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -138,7 +138,7 @@ const handleMouseEnter = (label: string) => {
                           {subLink.subLinks ? (
                             <Link
                               href={subLink.href}
-                              className="w-full px-4 py-2 text-sm text-foreground hover:bg-accent flex items-center justify-between transition-colors"
+                              className="w-full px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary flex items-center justify-between transition-colors"
                             >
                               {subLink.label}
                               <ChevronDown className="w-4 h-4 transition-transform group-hover/sub:rotate-180" />
@@ -146,7 +146,7 @@ const handleMouseEnter = (label: string) => {
                           ) : (
                             <Link
                               href={subLink.href}
-                              className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                              className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                             >
                               {subLink.label}
                             </Link>
@@ -161,7 +161,7 @@ const handleMouseEnter = (label: string) => {
                                   <Link
                                     key={deepLink.label}
                                     href={deepLink.href}
-                                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors"
+                                    className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                                   >
                                     {deepLink.label}
                                   </Link>
@@ -186,7 +186,7 @@ const handleMouseEnter = (label: string) => {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-foreground hover:bg-accent rounded-lg transition-colors"
+            className="md:hidden p-2 text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
@@ -203,7 +203,7 @@ const handleMouseEnter = (label: string) => {
                   {link.href && !link.subLinks ? (
                     <Link
                       href={link.href}
-                      className="block px-4 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent transition-colors"
+                      className="block px-4 py-2 rounded-md text-base font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.label}
@@ -212,7 +212,7 @@ const handleMouseEnter = (label: string) => {
                     <>
                       <button
                         onClick={() => toggleDropdown(link.label)}
-                        className="w-full text-left px-4 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent transition-colors flex items-center justify-between"
+                        className="w-full text-left px-4 py-2 rounded-md text-base font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors flex items-center justify-between"
                       >
                         {link.label}
                         {link.subLinks && (
@@ -225,14 +225,14 @@ const handleMouseEnter = (label: string) => {
                       </button>
 
                       {openDropdown === link.label && link.subLinks && (
-                        <div className="bg-accent/40 rounded-md ml-4 mt-1 space-y-1">
+                        <div className="bg-primary/10 rounded-md ml-4 mt-1 space-y-1">
                           {link.subLinks.map((subLink) => (
                             <div key={subLink.label}>
                               {subLink.subLinks ? (
                                 <>
                                   <button
                                     onClick={(e) => toggleSubDropdown(subLink.label, e)}
-                                    className="w-full text-left px-4 py-2 rounded-md text-sm text-foreground hover:bg-accent transition-colors flex items-center justify-between"
+                                    className="w-full text-left px-4 py-2 rounded-md text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors flex items-center justify-between"
                                   >
                                     {subLink.label}
                                     <ChevronDown
@@ -245,12 +245,12 @@ const handleMouseEnter = (label: string) => {
                                   </button>
 
                                   {openSubDropdown === subLink.label && (
-                                    <div className="bg-accent/60 rounded-md ml-4 mt-1 space-y-1">
+                                    <div className="bg-primary/15 rounded-md ml-4 mt-1 space-y-1">
                                       {subLink.subLinks.map((deepLink) => (
                                         <Link
                                           key={deepLink.label}
                                           href={deepLink.href}
-                                          className="block px-4 py-2 rounded-md text-sm text-foreground hover:bg-accent transition-colors"
+                                          className="block px-4 py-2 rounded-md text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                                           onClick={() => setMobileOpen(false)}
                                         >
                                           {deepLink.label}
@@ -262,7 +262,7 @@ const handleMouseEnter = (label: string) => {
                               ) : (
                                 <Link
                                   href={subLink.href}
-                                  className="block px-4 py-2 rounded-md text-sm text-foreground hover:bg-accent transition-colors"
+                                  className="block px-4 py-2 rounded-md text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                                   onClick={() => setMobileOpen(false)}
                                 >
                                   {subLink.label}

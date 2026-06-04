@@ -22,36 +22,7 @@ const stats = [
   { number: "12+", label: "Years of Excellence", icon: Users },
 ];
 
-const services = [
-  {
-    icon: Users,
-    title: "Student-First Approach",
-    description:
-      "Every recommendation we make is rooted in what's best for the student's academic and personal growth.",
-    bg: "bg-blue-500",
-  },
-  {
-    icon: Award,
-    title: "Transparency & Trust",
-    description:
-      "We believe in honest guidance — no hidden fees, no false promises. Just genuine support for your journey.",
-    bg: "bg-emerald-500",
-  },
-  {
-    icon: Globe,
-    title: "Global Network",
-    description:
-      "Our partnerships with top universities across 25+ countries ensure you get access to the best opportunities worldwide.",
-    bg: "bg-purple-500",
-  },
-  {
-    icon: ArrowRight,
-    title: "End-to-End Support",
-    description:
-      "From university selection to visa processing to pre-departure briefings — we're with you every step of the way.",
-    bg: "bg-orange-500",
-  },
-];
+
 
 export const metadata = seoMetadata({
   pageTitle: 'About Us',
