@@ -113,7 +113,7 @@ const pteVsIelts = [
   { feature: "Retake Wait", pte: "5 days", ielts: "No minimum" },
 ];
 
-const whyKIEC = [
+const whyExact Education = [
   {
     icon: Award,
     title: "Expert PTE Trainers",
@@ -364,14 +364,14 @@ const PTE = () => {
         </div>
       </section>
 
-      {/* Why KIEC */}
+      {/* Why Exact Education */}
       <section className="bg-background py-16">
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
             Why Choose Exact Education for PTE Preparation?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyKIEC.map((item) => (
+            {whyExact Education.map((item) => (
               <Card
                 key={item.title}
                 className="text-center hover:shadow-lg transition-shadow"

@@ -78,7 +78,7 @@ const modules = [
   },
 ];
 
-const whyKIEC = [
+const whyExactEducation = [
   { icon: Award, title: "20+ Years of Excellence", desc: "Two decades of proven track record in English test preparation across Nepal" },
   { icon: Users, title: "10,000+ Students Guided", desc: "Thousands of students successfully achieved their target IELTS band scores" },
   { icon: Star, title: "Certified IELTS Trainers", desc: "Expert instructors trained in Cambridge IELTS methodology and scoring criteria" },
@@ -90,7 +90,7 @@ const whyKIEC = [
 const faqs = [
   {
     question: "How long should I prepare for IELTS?",
-    answer: "Preparation time depends on your current English level. If you're at Band 5 and targeting Band 7, expect 8–12 weeks of focused study. Students already near their target may need only 4–6 weeks. At KIEC, we assess your level on Day 1 and create a personalised study plan.",
+    answer: "Preparation time depends on your current English level. If you're at Band 5 and targeting Band 7, expect 8–12 weeks of focused study. Students already near their target may need only 4–6 weeks. At Exact Education, we assess your level on Day 1 and create a personalised study plan.",
   },
   {
     question: "What's the difference between IELTS Academic and General Training?",
@@ -255,14 +255,14 @@ const IELTS= () => {
         </div>
       </section>
 
-      {/* Why KIEC */}
+      {/* Why Exact Education */}
       <section className="bg-background py-16">
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            Why Choose KIEC for IELTS Preparation?
+            Why Choose Exact Education for IELTS Preparation?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyKIEC.map((item) => (
+            {whyExactEducation.map((item) => (
               <Card key={item.title} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
