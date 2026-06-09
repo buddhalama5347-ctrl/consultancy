@@ -113,7 +113,7 @@ const pteVsIelts = [
   { feature: "Retake Wait", pte: "5 days", ielts: "No minimum" },
 ];
 
-const whyExact Education = [
+const whyExactEducation = [
   {
     icon: Award,
     title: "Expert PTE Trainers",
@@ -371,7 +371,7 @@ const PTE = () => {
             Why Choose Exact Education for PTE Preparation?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyExact Education.map((item) => (
+            {whyExactEducation.map((item) => (
               <Card
                 key={item.title}
                 className="text-center hover:shadow-lg transition-shadow"
