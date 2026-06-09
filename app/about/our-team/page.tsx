@@ -36,7 +36,7 @@ const teamMembers = [
     name: "Tshering Syangtan",
     role: "Operation Manager Head",
     image:
-      "/tshering.JPG",
+      "/tshering.jpg",
   },
  
 ];
